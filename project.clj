@@ -3,6 +3,8 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
+  :local-repo "./.m2"
+  :repositories {"sonatype-oss-public" "https://oss.sonatype.org/content/groups/public/"}
   :dependencies [[clojure.java-time "0.3.2"]
                  [com.fasterxml.jackson.core/jackson-core "2.9.7"]
                  [com.fasterxml.jackson.datatype/jackson-datatype-jdk8 "2.9.7"]
@@ -34,7 +36,7 @@
                  [selmer "1.12.3"]]
 
   :min-lein-version "2.0.0"
-  
+
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
@@ -42,6 +44,7 @@
   :main ^:skip-aot pan-toksyczny.core
 
   :plugins [[lein-immutant "2.1.0"]
+            [lein-ancient "0.6.15"]
             [lein-kibit "0.1.2"]]
 
   :profiles
@@ -59,9 +62,16 @@
                                  [pjstadig/humane-test-output "0.9.0"]
                                  [prone "1.6.1"]
                                  [ring/ring-devel "1.7.1"]
-                                 [ring/ring-mock "0.3.2"]]
-                  :plugins      [[com.jakemccrary/lein-test-refresh "0.23.0"]]
-                  
+                                 [ring/ring-mock "0.3.2"]
+
+                                 [nrepl "0.4.5"] ; emacs/cider
+                                 ]
+                  :plugins      [[com.jakemccrary/lein-test-refresh "0.23.0"]
+
+                                 [refactor-nrepl "2.4.0"] ; emacs/cider
+                                 [cider/cider-nrepl "0.19.0-SNAPSHOT"] ; emacs/cider
+                                 ]
+
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:init-ns user}
