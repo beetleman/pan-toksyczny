@@ -4,7 +4,6 @@
             [reitit.swagger-ui :as swagger-ui]
             [reitit.ring :as ring]
             [ring.middleware.content-type :refer [wrap-content-type]]
-            [ring.middleware.webjars :refer [wrap-webjars]]
             [pan-toksyczny.env :refer [defaults]]
             [mount.core :as mount]))
 
@@ -28,5 +27,4 @@
            :config {:validator-url nil}})
         (ring/create-resource-handler
           {:path "/"})
-        (wrap-content-type (wrap-webjars (constantly nil)))
         (ring/create-default-handler)))))
