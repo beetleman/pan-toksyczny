@@ -10,7 +10,7 @@
                  [com.fasterxml.jackson.datatype/jackson-datatype-jdk8 "2.9.7"]
                  [conman "0.8.3"]
                  [cprop "0.1.13"]
-                 [luminus-immutant "0.2.4"]
+                 [luminus-immutant "0.2.4" :exclusions [org.immutant/web]]
                  [luminus-migrations "0.6.1"]
                  [luminus-transit "0.1.1"]
                  [luminus/ring-ttl-session "0.3.2"]
@@ -26,7 +26,15 @@
                  [org.postgresql/postgresql "42.2.5"]
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [selmer "1.12.3"]]
+                 [selmer "1.12.3"]
+                 [clj-http "3.9.1"]
+
+                 [funcool/promesa "1.9.0"]
+                 [funcool/cats "2.3.1"]
+
+                 [org.immutant/web "2.1.10"]
+                 [org.immutant/messaging "2.1.10"]
+                 [org.immutant/scheduling "2.1.10"]]
 
   :min-lein-version "2.0.0"
 

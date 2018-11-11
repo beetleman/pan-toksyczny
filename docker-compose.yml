@@ -12,6 +12,8 @@ services:
       - tests_pan_toksyczny
     environment:
       - DATABASE_URL="postgresql://postgres:example@tests-db:5432/postgres"
+      - AQICN_TOKEN=$AQICN_TOKEN
+      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
     tty: true
     command: lein test-refresh
 
@@ -33,6 +35,8 @@ services:
       - pan_toksyczny
     environment:
       - DATABASE_URL="postgresql://postgres:example@repl-db:5432/postgres"
+      - AQICN_TOKEN=$AQICN_TOKEN
+      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
     ports:
       - "3000:3000"
       - "7000:7000"
