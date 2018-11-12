@@ -26,11 +26,8 @@
    ["/swagger.json"
     {:get {:no-doc true
            :handler (swagger/create-swagger-handler)}}]
-   ["/ping" {:get (constantly (ok {:message "ping"}))}]
-   ["/pong" {:post (constantly (ok {:message "pong"}))}]
    ["/messenger" {:post (fn [{body-params :body-params}]
                           (fb-publish body-params)
                           (ok ""))
                   :get (fn [{params :params}]
-                         (clojure.pprint/pprint params)
                          (ok (params "hub.challenge")))}]])

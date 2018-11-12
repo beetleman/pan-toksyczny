@@ -6,7 +6,7 @@
 (def base-url "https://graph.facebook.com/v2.6")
 (def messages-url (str base-url "/me/messages"))
 
-(defn send-msg [access_token body]
+(defn- create-call [access_token body]
   {:method  :post
    :url     messages-url
    :options {:query-params {:access_token access_token}
@@ -14,6 +14,20 @@
              :body         (generate-string body)}})
 
 
-(defn send-text [access_token recipient text]
-  (send-msg access_token {:recipient      {:id recipient}
-                          :message        {:text text}}))
+
+(defn- message-body [recipient message]
+  {:recipient {:id recipient}
+   :message   message})
+
+(defn- text-body [recipient text]
+  (message-body recipient {:text text}))
+
+(defn text [access_token recipient text]
+  (create-call access_token
+               (text-body recipient text)))
+
+(defn text-location [access_token recipient text]
+  (create-call access_token
+               (assoc-in (text-body recipient text)
+                         [:message :quick_replies]
+                         [{:content_type "location"}])))

@@ -17,6 +17,24 @@
    :options {:query-params {:token token}}})
 
 
+(defn coordinates-feed [{long :long lat :lat} token]
+  {:method  :get
+   :url     (str url-base "/feed/geo:" lat ";" long "/")
+   :options {:query-params {:token token}}})
+
+
+#_(let [coordinates {:long 20.0160684, :lat 50.087988}
+      token       (:aqicn-token env)
+      feed        (-> coordinates
+                      (coordinates-feed token)
+                      http/execute)
+      data        (time (-> feed
+                            deref
+                            :body))]
+  (clojure.pprint/pprint data)
+  data)
+
+
 #_(let [token    (:aqicn-token env)
       krk      (-> "kraków"
                    (search token)
