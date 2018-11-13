@@ -1,1 +1,2 @@
-{}
+{:port 3000
+ :database-url "jdbc:h2:./pan_toksyczny_test.db"}

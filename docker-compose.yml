@@ -6,50 +6,21 @@ services:
     volumes:
       - ./:$PWD
     working_dir: $PWD
-    depends_on:
-      - tests-db
-    networks:
-      - tests_pan_toksyczny
     environment:
-      - DATABASE_URL="postgresql://postgres:example@tests-db:5432/postgres"
       - AQICN_TOKEN=$AQICN_TOKEN
       - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
     tty: true
     command: lein test-refresh
-
-  tests-db:
-    image: postgres
-    networks:
-      - tests_pan_toksyczny
-    environment:
-      POSTGRES_PASSWORD: example
 
   repl:
     image: clojure:lein
     volumes:
       - ./:$PWD
     working_dir: $PWD
-    depends_on:
-      - repl-db
-    networks:
-      - pan_toksyczny
     environment:
-      - DATABASE_URL="postgresql://postgres:example@repl-db:5432/postgres"
       - AQICN_TOKEN=$AQICN_TOKEN
       - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
     ports:
       - "3000:3000"
       - "7000:7000"
     command: lein repl :headless :host 0.0.0.0 :port 7000
-
-  repl-db:
-    image: postgres
-    networks:
-      - pan_toksyczny
-    environment:
-      POSTGRES_PASSWORD: example
-
-
-networks:
-  pan_toksyczny:
-  tests_pan_toksyczny:
