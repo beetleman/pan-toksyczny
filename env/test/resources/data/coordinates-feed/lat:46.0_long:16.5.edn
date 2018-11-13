@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 13,
+  :idx 5161,
+  :attributions
+  [{:url "http://iszz.azo.hr/iskzl/",
+    :name "Croatian Environment Agency - Agencija za zaštitu okoliša"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.823716666667 16.035825],
+   :name "Zagreb-2, Croatia",
+   :url "https://aqicn.org/city/croatia/zagreb-2"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 13.8},
+   :pm10 {:v 13},
+   :w {:v 0.3},
+   :wg {:v 3.3},
+   :co {:v 0.1},
+   :h {:v 67.3},
+   :so2 {:v 0.5},
+   :t {:v 15.5},
+   :p {:v 1024.8}},
+  :time {:s "2018-11-13 19:00:00", :tz "+01:00", :v 1542135600},
+  :debug {:sync "2018-11-14T03:42:34+09:00"}}}

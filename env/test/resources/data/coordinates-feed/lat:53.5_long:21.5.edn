@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 5,
+  :idx 6521,
+  :attributions
+  [{:url "http://www.wios.bialystok.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Bialystok"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [53.1817812 22.0566504],
+   :name "Łomża-Miejska, Poland",
+   :url "https://aqicn.org/city/poland/bialystok/lomza-miejska"},
+  :dominentpol "pm10",
+  :iaqi
+  {:h {:v 94.8},
+   :no2 {:v 4.2},
+   :p {:v 1009.5},
+   :pm10 {:v 5},
+   :r {:v 0.1},
+   :so2 {:v 2.9},
+   :t {:v 9.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:13:09+09:00"}}}

@@ -1,0 +1,23 @@
+{:status "ok",
+ :data
+ {:aqi 17,
+  :idx 6568,
+  :attributions
+  [{:url "https://airpomerania.pl/", :name "Air Pomerania"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [54.031129 19.03278],
+   :name "Malbork, Poland",
+   :url "https://aqicn.org/city/poland/pomorski/malbork"},
+  :dominentpol "o3",
+  :iaqi
+  {:co {:v 2.9},
+   :no2 {:v 4},
+   :o3 {:v 17.1},
+   :pm10 {:v 12},
+   :t {:v 8.3},
+   :w {:v 3.3},
+   :wg {:v 8.6}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:35:52+09:00"}}}

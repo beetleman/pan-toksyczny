@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 149,
+  :idx 8765,
+  :attributions
+  [{:url "http://www.sepa.gov.rs/",
+    :name
+    "SEPA - Serbian National Air Monitoring network (Državna mreža za automatski monitoring kvaliteta vazduha)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.099435 19.670468],
+   :name "Subotica, Serbia",
+   :url "https://aqicn.org/city/serbia/subotica"},
+  :dominentpol "pm25",
+  :iaqi
+  {:co {:v 8.7},
+   :dew {:v 5.2},
+   :h {:v 76.1},
+   :o3 {:v 6.5},
+   :p {:v 1016.8},
+   :pm10 {:v 65},
+   :pm25 {:v 149},
+   :t {:v 9.2}},
+  :time {:s "2018-11-13 21:00:00", :tz "+01:00", :v 1542142800},
+  :debug {:sync "2018-11-14T08:01:31+09:00"}}}

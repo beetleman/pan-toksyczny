@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 48,
+  :idx 3340,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.07098 18.22527],
+   :name "Pécs Szabadság u., Pécs, Hungary",
+   :url "https://aqicn.org/city/hungary/pecs/szabadsag-ut"},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 7.3},
+   :no2 {:v 8},
+   :o3 {:v 13.3},
+   :pm10 {:v 28},
+   :pm25 {:v 48},
+   :co {:v 4.1},
+   :h {:v 73.9},
+   :so2 {:v 2.3},
+   :t {:v 11.8},
+   :p {:v 1003.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:54:22+09:00"}}}

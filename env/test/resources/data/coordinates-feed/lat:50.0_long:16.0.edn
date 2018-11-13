@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 65,
+  :idx 2769,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.024038 15.763549],
+   :name "Pardubice Dukla, Pardubicky, Czech Republic",
+   :url
+   "https://aqicn.org/city/czechrepublic/pardubicky/pardubice-dukla"},
+  :dominentpol "pm25",
+  :iaqi
+  {:h {:v 94.6},
+   :no2 {:v 8.5},
+   :o3 {:v 13.8},
+   :p {:v 1028.3},
+   :pm10 {:v 18},
+   :pm25 {:v 65},
+   :so2 {:v 0.7}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:45:45+09:00"}}}

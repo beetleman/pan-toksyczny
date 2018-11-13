@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 6,
+  :idx 2678,
+  :attributions
+  [{:url "https://www.armaag.gda.pl/",
+    :name
+    "Gdańsk Metropolitan Air Quality Monitoring (Agencja Eegionalnego Monitoringu Atmosfery Aglomeracji Gdańskiej)"}
+   {:url "https://airpomerania.pl/", :name "Air Pomerania"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [54.367777777778 18.701111111111],
+   :name "Gdansk Stogi, Gdansk, Poland",
+   :url "https://aqicn.org/city/poland/gdansk/gdansk-stogi"},
+  :dominentpol "pm10",
+  :iaqi
+  {:h {:v 91.6},
+   :no2 {:v 6.3},
+   :p {:v 1019.3},
+   :pm10 {:v 6},
+   :so2 {:v 1.8},
+   :t {:v 8.8},
+   :w {:v 2.6},
+   :wg {:v 6.3}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:38:02+09:00"}}}

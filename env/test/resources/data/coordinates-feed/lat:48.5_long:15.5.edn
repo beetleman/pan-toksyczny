@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 53,
+  :idx 6628,
+  :attributions
+  [{:url "http://www.umweltbundesamt.at/",
+    :name "Umweltbundesamt -Aktuelle Luftgütemesswerte"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.2125 15.634167],
+   :name
+   "Eybnerstraße, hinter D. Gran-Str. 16, Sportpl. Sonderschule, Austria",
+   :url
+   "https://aqicn.org/city/austria/eybnerstrasse--hinter-d.-gran-str.-16--sportpl.-sonderschule"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 15.1},
+   :pm10 {:v 15},
+   :w {:v 9.1},
+   :wg {:v 14.2},
+   :pm25 {:v 53},
+   :h {:v 92.4},
+   :so2 {:v 2.1},
+   :t {:v 10.2},
+   :p {:v 1030.6}},
+  :time {:s "2018-11-13 21:00:00", :tz "+01:00", :v 1542142800},
+  :debug {:sync "2018-11-14T05:42:49+09:00"}}}

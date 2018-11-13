@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 51,
+  :idx 5158,
+  :attributions
+  [{:url "http://iszz.azo.hr/iskzl/",
+    :name "Croatian Environment Agency - Agencija za zaštitu okoliša"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.479055555556 16.780666666667],
+   :name "Kutina-1, Croatia",
+   :url "https://aqicn.org/city/croatia/kutina-1"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 37},
+   :o3 {:v 1.3},
+   :pm10 {:v 51},
+   :w {:v 0.3},
+   :wg {:v 3.3},
+   :co {:v 0.1},
+   :h {:v 67.3},
+   :so2 {:v 3.3},
+   :t {:v 15.5},
+   :p {:v 1024.8}},
+  :time {:s "2018-11-13 19:00:00", :tz "+01:00", :v 1542135600},
+  :debug {:sync "2018-11-14T03:37:29+09:00"}}}

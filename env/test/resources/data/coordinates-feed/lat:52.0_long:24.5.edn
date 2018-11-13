@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 4,
+  :idx 6479,
+  :attributions
+  [{:url "http://envir.wios.lublin.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Lublin (Wojewódzki Inspektorat Ochrony Środowiska w Lublinie)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.0387126 23.1445026],
+   :name "Biała Podlaska, Poland",
+   :url "https://aqicn.org/city/poland/lublin/biala-podlaska"},
+  :dominentpol "so2",
+  :iaqi
+  {:dew {:v 5.3},
+   :h {:v 93.3},
+   :no2 {:v 5.3},
+   :o3 {:v 3.9},
+   :p {:v 1004.9},
+   :so2 {:v 4},
+   :t {:v 6.3}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:07:51+09:00"}}}

@@ -1,0 +1,23 @@
+{:status "ok",
+ :data
+ {:aqi 156,
+  :idx 9259,
+  :attributions
+  [{:url "http://www.sepa.gov.rs/",
+    :name
+    "SEPA - Serbian National Air Monitoring network (Državna mreža za automatski monitoring kvaliteta vazduha)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [44.664092 20.926731],
+   :name "Smederevo Centar, Serbia",
+   :url "https://aqicn.org/city/serbia/smederevo-centar"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 15.3},
+   :pm10 {:v 63},
+   :pm25 {:v 156},
+   :so2 {:v 10.2},
+   :w {:v 2.5}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:34:02+09:00"}}}

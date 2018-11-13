@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 57,
+  :idx 6534,
+  :attributions
+  [{:url "http://powietrze.poznan.wios.gov.pl/",
+    :name "Wielkopolski Monitoring network"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [51.74905278 18.04838889],
+   :name "Kalisz ul.Hanki Sawickiej, Poland",
+   :url
+   "https://aqicn.org/city/poland/wielkopolski/kalisz-ul.hanki-sawickiej"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 4.3},
+   :o3 {:v 18.8},
+   :pm10 {:v 20},
+   :w {:v 7.8},
+   :wg {:v 13.8},
+   :pm25 {:v 57},
+   :co {:v 1.6},
+   :h {:v 85.6},
+   :so2 {:v 1.5},
+   :t {:v 8.6},
+   :p {:v 1030.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:33:13+09:00"}}}

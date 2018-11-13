@@ -1,0 +1,18 @@
+{:status "ok",
+ :data
+ {:aqi 13,
+  :idx 9255,
+  :attributions
+  [{:url "http://www.sepa.gov.rs/",
+    :name
+    "SEPA - Serbian National Air Monitoring network (Državna mreža za automatski monitoring kvaliteta vazduha)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [44.870226 20.648069],
+   :name "Pančevo Cara Dušana, Serbia",
+   :url "https://aqicn.org/city/serbia/pancevo-cara-dusana"},
+  :dominentpol "o3",
+  :iaqi {:no2 {:v 6.6}, :o3 {:v 12.7}, :so2 {:v 2.2}, :w {:v 2.5}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:16:23+09:00"}}}

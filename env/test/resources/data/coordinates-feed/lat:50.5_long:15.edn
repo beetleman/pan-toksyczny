@@ -1,0 +1,29 @@
+{:status "ok",
+ :data
+ {:aqi 134,
+  :idx 2719,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.428647 14.913859],
+   :name "Mlada Boleslav, Stredocesky, Czech Republic",
+   :url
+   "https://aqicn.org/city/czechrepublic/stredocesky/mlada-boleslav"},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 5.5},
+   :r {:v 0.2},
+   :no2 {:v 11},
+   :o3 {:v 8.3},
+   :pm10 {:v 39},
+   :pm25 {:v 134},
+   :h {:v 92.7},
+   :so2 {:v 0.7},
+   :t {:v 6.6},
+   :p {:v 980.7}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:45:42+09:00"}}}

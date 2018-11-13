@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 36,
+  :idx 6871,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.1112285 24.2271373],
+   :name "Aleea Castanilor, Copşa Mică, Romania",
+   :url
+   "https://aqicn.org/city/romania/sibiu/copsa-mica/aleea-castanilor"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 18.4},
+   :o3 {:v 2.3},
+   :pm10 {:v 36},
+   :so2 {:v 4},
+   :w {:v 1.5}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:33:31+09:00"}}}

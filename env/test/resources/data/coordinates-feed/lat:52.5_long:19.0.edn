@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 73,
+  :idx 6525,
+  :attributions
+  [{:url "http://wios.bydgoszcz.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Bydgoszczy (Wojewódzki Inspektorat Ochrony Środowiska w Bydgoszczy)"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.658611111111 19.059166666667],
+   :name "Włocławek-Okrzei, Poland",
+   :url "https://aqicn.org/city/poland/bydgoszcz/wloclawek-okrzei"},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 8.4},
+   :r {:v 0.3},
+   :no2 {:v 6.1},
+   :o3 {:v 10.2},
+   :pm10 {:v 21},
+   :pm25 {:v 73},
+   :co {:v 4.5},
+   :h {:v 92.8},
+   :so2 {:v 0.7},
+   :t {:v 9.5},
+   :p {:v 1009.8}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:26:03+09:00"}}}

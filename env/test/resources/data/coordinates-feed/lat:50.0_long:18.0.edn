@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 72,
+  :idx 2806,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.94499 17.90953],
+   :name "Opava-Katerinky, Moravskoslezsky, Czech Republic",
+   :url
+   "https://aqicn.org/city/czechrepublic/moravskoslezsky/opava-katerinky"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 7.6},
+   :o3 {:v 12.1},
+   :pm10 {:v 27},
+   :pm25 {:v 72},
+   :so2 {:v 2.9},
+   :t {:v 9.5},
+   :w {:v 2.6},
+   :wg {:v 4.2}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:47:28+09:00"}}}

@@ -1,0 +1,20 @@
+{:status "ok",
+ :data
+ {:aqi 11,
+  :idx 3321,
+  :attributions
+  [{:url "http://www.eea.europa.eu/themes/air/",
+    :name "European Environment Agency"}
+   {:url "http://gamta.lt/cms/index",
+    :name
+    "AAA - Aplinkos Apsaugos Agentūra (Lithuania Environmental Protection Agency"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [55.6848552 21.1840107],
+   :name "Klaipėda Šilutės Pl., Lithuania",
+   :url "https://aqicn.org/city/lithuania/klaipeda-silutes-pl."},
+  :dominentpol "o3",
+  :iaqi {:o3 {:v 10.9}, :pm10 {:v 55}, :pm25 {:v 128}, :wg {:v 12.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:40:59+09:00"}}}

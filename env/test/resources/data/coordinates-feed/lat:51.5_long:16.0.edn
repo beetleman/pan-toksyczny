@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 15,
+  :idx 8130,
+  :attributions
+  [{:url "http://www.wroclaw.pios.gov.pl/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska w Zielonej Górze"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [51.2045203 16.180513],
+   :name "Legnica - Rzeczypospolitej, Poland",
+   :url
+   "https://aqicn.org/city/poland/dolnoslaskie/legnica-rzeczypospolitej"},
+  :dominentpol "o3",
+  :iaqi
+  {:no2 {:v 6.2},
+   :o3 {:v 15.3},
+   :pm10 {:v 9},
+   :w {:v 0.3},
+   :wg {:v 1.6},
+   :co {:v 3.2},
+   :h {:v 86.5},
+   :so2 {:v 1.4},
+   :t {:v 7.4},
+   :p {:v 1025.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:35:51+09:00"}}}

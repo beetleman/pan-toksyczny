@@ -1,0 +1,19 @@
+{:status "ok",
+ :data
+ {:aqi 42,
+  :idx 8591,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.7805322 23.6265208],
+   :name "Str. Aurel Vlaicu, Cluj-Napoca, Romania",
+   :url
+   "https://aqicn.org/city/romania/cluj/cluj-napoca/str.-aurel-vlaicu"},
+  :dominentpol "pm10",
+  :iaqi {:no2 {:v 30.8}, :pm10 {:v 42}, :so2 {:v 8.9}, :w {:v 0.2}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:29:44+09:00"}}}

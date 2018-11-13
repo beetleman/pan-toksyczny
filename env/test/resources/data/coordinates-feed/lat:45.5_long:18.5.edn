@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 74,
+  :idx 5752,
+  :attributions
+  [{:url "http://iszz.azo.hr/iskzl/",
+    :name "Croatian Environment Agency - Agencija za zaštitu okoliša"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.558791666667 18.698769444444],
+   :name "Osijek-1, Croatia",
+   :url "https://aqicn.org/city/croatia/osijek-1"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 0.1},
+   :no2 {:v 49.5},
+   :o3 {:v 0.4},
+   :p {:v 1025.5},
+   :pm10 {:v 74},
+   :so2 {:v 4.2},
+   :w {:v 0.5}},
+  :time {:s "2018-11-13 19:00:00", :tz "+01:00", :v 1542135600},
+  :debug {:sync "2018-11-14T03:39:47+09:00"}}}

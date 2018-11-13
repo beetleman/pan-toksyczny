@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 4,
+  :idx 6830,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.9657972 23.5575656],
+   :name "Str. M. Kogălniceanu, Sebeş, Romania",
+   :url
+   "https://aqicn.org/city/romania/alba/sebes/str.-m.-kogalniceanu"},
+  :dominentpol "so2",
+  :iaqi
+  {:dew {:v 2.9},
+   :h {:v 93.2},
+   :no2 {:v 36.1},
+   :o3 {:v 1.9},
+   :p {:v 994.6},
+   :so2 {:v 4.3},
+   :t {:v 3.9}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:17:52+09:00"}}}

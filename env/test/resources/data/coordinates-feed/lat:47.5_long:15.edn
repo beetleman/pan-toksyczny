@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 11,
+  :idx 2907,
+  :attributions
+  [{:url "http://www.umweltbundesamt.at/",
+    :name "Umweltbundesamt -Aktuelle Luftgütemesswerte"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.37555555555556 15.0745],
+   :name "8), Kindergarten Pestalozzigasse (Pz.Nr. 71, Austria",
+   :url
+   "https://aqicn.org/city/austria/kindergarten-pestalozzigasse-pz.nr.-71/8"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 0.1},
+   :dew {:v 2.6},
+   :h {:v 76.7},
+   :no2 {:v 3.2},
+   :p {:v 890.2},
+   :pm10 {:v 11},
+   :so2 {:v 1.6},
+   :t {:v 6.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:56:42+09:00"}}}

@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 114,
+  :idx 3144,
+  :attributions
+  [{:url "http://worldweather.wmo.int",
+    :name
+    "World Meteorological Organization - surface synoptic observations (WMO-SYNOP)"}
+   {:url "http://www.shmu.sk/sk/",
+    :name
+    "Slovak hydrometeorological institute (Slovenský hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.9200933 20.8859343],
+   :name "SNP, Krompachy, Slovakia",
+   :url "https://aqicn.org/city/slovakia/krompachy/snp"},
+  :dominentpol "pm25",
+  :iaqi
+  {:r {:v 991},
+   :no2 {:v 13.8},
+   :pm10 {:v 39},
+   :w {:v 8},
+   :pm25 {:v 114},
+   :co {:v 7.1},
+   :h {:v 93.8},
+   :so2 {:v 6.1},
+   :t {:v 3.7},
+   :p {:v 882.2}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:41:36+09:00"}}}

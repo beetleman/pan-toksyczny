@@ -23,28 +23,18 @@
    :options {:query-params {:token token}}})
 
 
-#_(let [coordinates {:long 20.0160684, :lat 50.087988}
-      token       (:aqicn-token env)
-      feed        (-> coordinates
-                      (coordinates-feed token)
-                      http/execute)
-      data        (time (-> feed
-                            deref
-                            :body))]
-  (clojure.pprint/pprint data)
-  data)
-
-
-#_(let [token    (:aqicn-token env)
-      krk      (-> "kraków"
-                   (search token)
-                   http/execute)
-      uid      (time (-> krk deref :body :data first :uid))
-      krk-feed (-> uid
-                   (city-feed token)
-                   http/execute)
-      krk-data (time (-> krk-feed
-                         deref
-                         :body
-                         :data))]
-  (println krk-data))
+(defn generate-test-data []
+  (doseq [long (range 15 25 0.5)
+          lat  (range 45 55 0.5)]
+    (let [coordinates {:long long, :lat lat}
+          token       (:aqicn-token env)
+          feed        (-> coordinates
+                          (coordinates-feed token)
+                          http/execute)
+          data        (time (-> feed
+                                deref
+                                :body))]
+      (clojure.pprint/pprint data
+                             (clojure.java.io/writer (str "coordinates-feed/"
+                                                          "lat:" lat "_"
+                                                          "long:" long ".edn"))))))

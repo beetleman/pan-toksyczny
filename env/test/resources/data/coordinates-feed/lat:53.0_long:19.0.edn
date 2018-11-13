@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 39,
+  :idx 6526,
+  :attributions
+  [{:url "http://wios.bydgoszcz.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Bydgoszczy (Wojewódzki Inspektorat Ochrony Środowiska w Bydgoszczy)"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [53.028611111111 18.665833333333],
+   :name "Toruń-Policja, Poland",
+   :url "https://aqicn.org/city/poland/bydgoszcz/torun-policja"},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 7.8},
+   :r {:v 0.6},
+   :no2 {:v 7.8},
+   :o3 {:v 10.2},
+   :pm10 {:v 11},
+   :pm25 {:v 39},
+   :co {:v 3.6},
+   :h {:v 96},
+   :so2 {:v 1},
+   :t {:v 8.4},
+   :p {:v 1014.3}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:16:49+09:00"}}}

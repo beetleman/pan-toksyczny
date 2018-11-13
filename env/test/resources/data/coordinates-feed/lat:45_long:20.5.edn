@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 111,
+  :idx 10556,
+  :attributions
+  [{:url "http://www.sepa.gov.rs/",
+    :name
+    "SEPA - Serbian National Air Monitoring network (Državna mreža za automatski monitoring kvaliteta vazduha)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [44.82112 20.459113],
+   :name "Beograd Stari grad, Serbia",
+   :url "https://aqicn.org/city/serbia/beograd-stari-grad"},
+  :dominentpol "pm25",
+  :iaqi
+  {:co {:v 4.5},
+   :no2 {:v 11.1},
+   :o3 {:v 10},
+   :pm10 {:v 41},
+   :pm25 {:v 111},
+   :w {:v 2.5}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:33:11+09:00"}}}

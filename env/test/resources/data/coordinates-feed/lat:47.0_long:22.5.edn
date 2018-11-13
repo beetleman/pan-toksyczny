@@ -1,0 +1,18 @@
+{:status "ok",
+ :data
+ {:aqi 46,
+  :idx 6839,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.045511 22.3237202],
+   :name "Comuna Tetchea, Tetchea, Romania",
+   :url "https://aqicn.org/city/romania/bihor/tetchea/comuna-tetchea"},
+  :dominentpol "pm10",
+  :iaqi {:no2 {:v 15}, :pm10 {:v 46}, :so2 {:v 4.2}, :w {:v 4.6}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:10:09+09:00"}}}

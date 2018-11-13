@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 5,
+  :idx 2825,
+  :attributions
+  [{:url "http://www.umweltbundesamt.at/",
+    :name "Umweltbundesamt -Aktuelle Luftgütemesswerte"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.0861111 16.3022222],
+   :name "Untere Bachgasse (Park vor Schule), Austria",
+   :url
+   "https://aqicn.org/city/austria/untere-bachgasse-park-vor-schule"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 0.1},
+   :no2 {:v 6.9},
+   :p {:v 1027.7},
+   :pm10 {:v 5},
+   :so2 {:v 2.1},
+   :t {:v 11.1},
+   :wg {:v 1.2}},
+  :time {:s "2018-11-13 21:00:00", :tz "+01:00", :v 1542142800},
+  :debug {:sync "2018-11-14T05:42:49+09:00"}}}

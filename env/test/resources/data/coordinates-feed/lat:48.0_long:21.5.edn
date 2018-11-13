@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 82,
+  :idx 3380,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.96115 21.70576],
+   :name "Nyíregyháza, Nyíregyháza, Hungary",
+   :url "https://aqicn.org/city/hungary/nyiregyhaza"},
+  :dominentpol "pm10",
+  :iaqi
+  {:dew {:v 5.5},
+   :r {:v 99.1},
+   :no2 {:v 27.9},
+   :o3 {:v 1.5},
+   :pm10 {:v 82},
+   :co {:v 9.4},
+   :h {:v 66.2},
+   :so2 {:v 1.5},
+   :t {:v 11.6},
+   :p {:v 1008.7}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:52:36+09:00"}}}

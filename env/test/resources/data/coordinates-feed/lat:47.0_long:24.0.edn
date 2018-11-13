@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 51,
+  :idx 7659,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.7817793 23.626916],
+   :name "Str. Dambovitei, Cluj-Napoca, Romania",
+   :url
+   "https://aqicn.org/city/romania/cluj/cluj-napoca/str.-dambovitei"},
+  :dominentpol "pm10",
+  :iaqi
+  {:h {:v 89.5},
+   :o3 {:v 2.3},
+   :pm10 {:v 51},
+   :so2 {:v 4},
+   :t {:v 4.5},
+   :w {:v 0.2}},
+  :time {:s "2018-11-14 00:00:00", :tz "+02:00", :v 1542153600},
+  :debug {:sync "2018-11-14T07:56:01+09:00"}}}

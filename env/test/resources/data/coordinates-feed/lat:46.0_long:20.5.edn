@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 35,
+  :idx 6836,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.1644781 20.7378581],
+   :name "str. Dorobanti, Nadlac, Romania",
+   :url "https://aqicn.org/city/romania/arad/nadlac/str.-dorobanti"},
+  :dominentpol "pm10",
+  :iaqi
+  {:dew {:v 6.6},
+   :h {:v 78.9},
+   :no2 {:v 2.8},
+   :p {:v 1014.7},
+   :pm10 {:v 35},
+   :so2 {:v 4.7},
+   :t {:v 10.1}},
+  :time {:s "2018-11-14 00:00:00", :tz "+02:00", :v 1542153600},
+  :debug {:sync "2018-11-14T07:56:07+09:00"}}}

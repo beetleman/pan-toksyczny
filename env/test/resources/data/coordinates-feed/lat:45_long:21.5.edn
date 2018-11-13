@@ -1,0 +1,19 @@
+{:status "ok",
+ :data
+ {:aqi 13,
+  :idx 4192,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [44.735184 21.6642348],
+   :name "Str. Unirii, Moldova Noua, Romania",
+   :url
+   "https://aqicn.org/city/romania/caras-severin/moldova-noua/str.-unirii"},
+  :dominentpol "pm10",
+  :iaqi {:pm10 {:v 13}, :so2 {:v 3}, :w {:v 9.5}, :wg {:v 14.9}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:39:50+09:00"}}}

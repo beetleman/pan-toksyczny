@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 159,
+  :idx 5162,
+  :attributions
+  [{:url "http://iszz.azo.hr/iskzl/",
+    :name "Croatian Environment Agency - Agencija za zaštitu okoliša"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.159472222222 17.9951],
+   :name "Slavonski Brod-1, Croatia",
+   :url "https://aqicn.org/city/croatia/slavonski-brod-1"},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 5.8},
+   :h {:v 78.2},
+   :no2 {:v 28.1},
+   :o3 {:v 3.4},
+   :p {:v 1014.8},
+   :pm25 {:v 159},
+   :so2 {:v 8.8},
+   :t {:v 9.4}},
+  :time {:s "2018-11-13 19:00:00", :tz "+01:00", :v 1542135600},
+  :debug {:sync "2018-11-14T03:41:05+09:00"}}}

@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 26,
+  :idx 8135,
+  :attributions
+  [{:url "http://www.wroclaw.pios.gov.pl/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska w Zielonej Górze"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.91347 15.765659],
+   :name "Jelenia Góra - Ogińskiego, Poland",
+   :url
+   "https://aqicn.org/city/poland/dolnoslaskie/jelenia-gora-oginskiego"},
+  :dominentpol "o3",
+  :iaqi
+  {:co {:v 2.3},
+   :no2 {:v 3},
+   :o3 {:v 26},
+   :pm10 {:v 5},
+   :pm25 {:v 19},
+   :so2 {:v 2.5},
+   :t {:v 5.5}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:33:46+09:00"}}}

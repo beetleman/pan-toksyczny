@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 57,
+  :idx 3397,
+  :attributions
+  [{:url "http://sojp.wios.warszawa.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Warsaw (Wojewódzki Inspektorat Ochrony Środowiska w Warszawie)"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.172033 22.282236],
+   :name "Konarskiego, Siedlce, Mazowieckie, Poland",
+   :url
+   "https://aqicn.org/city/poland/mazowieckie/siedlce/konarskiego"},
+  :dominentpol "pm25",
+  :iaqi
+  {:p {:v 1020.5},
+   :pm10 {:v 16},
+   :pm25 {:v 57},
+   :t {:v 8.7},
+   :w {:v 8.6},
+   :wg {:v 13.6}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:29:46+09:00"}}}

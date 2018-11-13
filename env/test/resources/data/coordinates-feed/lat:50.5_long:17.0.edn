@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 15,
+  :idx 8131,
+  :attributions
+  [{:url "http://www.wroclaw.pios.gov.pl/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska w Zielonej Górze"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.592325 16.819786],
+   :name "Ząbkowice Śląskie, Poland",
+   :url
+   "https://aqicn.org/city/poland/dolnoslaskie/zabkowice-slaskie"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 7.1},
+   :p {:v 1027.4},
+   :pm10 {:v 15},
+   :so2 {:v 3},
+   :t {:v 7.2}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:29:51+09:00"}}}

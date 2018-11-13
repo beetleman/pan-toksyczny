@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 268,
+  :idx 9319,
+  :attributions
+  [{:url "http://www.fhmzbih.gov.ba/",
+    :name "Federalni Hidrometeorološki Zavod"}
+   {:url "http://monitoringzrakatk.info/",
+    :name "Ministarstvo prostornog uređenja i zaštite okolice"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [44.540833333333 18.673333333333],
+   :name "Tuzlanski skver, Bosnia Herzegovina",
+   :url "https://aqicn.org/city/bosnia-herzegovina/tuzlanski/skver"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 14.9},
+   :o3 {:v 2.6},
+   :w {:v 0.5},
+   :pm25 {:v 268},
+   :co {:v 0.1},
+   :h {:v 82.7},
+   :so2 {:v 18},
+   :t {:v 7.7},
+   :p {:v 999.3}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:23:44+09:00"}}}

@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 98,
+  :idx 6551,
+  :attributions
+  [{:url "http://smjp.kielce.pios.gov.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Kielce (Wojewódzki Inspektorat Ochrony Środowiska w Kielcach)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.428888888889 21.277222222222],
+   :name "Połaniec, Poland",
+   :url "https://aqicn.org/city/poland/swietokrzyski/polaniec"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 2.6},
+   :o3 {:v 20.3},
+   :pm10 {:v 36},
+   :w {:v 6.5},
+   :wg {:v 11.5},
+   :pm25 {:v 98},
+   :co {:v 7.9},
+   :h {:v 92.5},
+   :so2 {:v 3.1},
+   :p {:v 1023.3}},
+  :time {:s "2018-11-14 00:00:00", :tz "+01:00", :v 1542153600},
+  :debug {:sync "2018-11-14T08:29:46+09:00"}}}

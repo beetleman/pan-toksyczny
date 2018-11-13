@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 23,
+  :idx 3361,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.195944 18.400246],
+   :name "Székesfehérvár, Székesfehérvár, Hungary",
+   :url "https://aqicn.org/city/hungary/szekesfehervar"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 9.3},
+   :dew {:v 8.7},
+   :h {:v 86.9},
+   :no2 {:v 9.1},
+   :o3 {:v 1.8},
+   :pm10 {:v 23},
+   :so2 {:v 0.9},
+   :t {:v 10.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:53:29+09:00"}}}

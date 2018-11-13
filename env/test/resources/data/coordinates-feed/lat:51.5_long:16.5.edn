@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 30,
+  :idx 6557,
+  :attributions
+  [{:url "http://www.zgora.pios.gov.pl/category/monitoring/powietrze/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska w Zielonej Górze"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [51.79972222 16.3175],
+   :name "Wschowa, Poland",
+   :url "https://aqicn.org/city/poland/lubuski/wschowa"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 3.1},
+   :o3 {:v 21.3},
+   :pm10 {:v 8},
+   :w {:v 3.01644},
+   :wg {:v 12.6},
+   :pm25 {:v 30},
+   :co {:v 2},
+   :wd {:v 234.727},
+   :h {:v 94.8772},
+   :so2 {:v 6.4},
+   :t {:v 7.70722},
+   :p {:v 1016.16}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:17:32+09:00"}}}

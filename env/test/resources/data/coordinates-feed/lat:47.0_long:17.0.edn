@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 28,
+  :idx 3347,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.238944 16.620351],
+   :name "Szombathely, Szombathely, Hungary",
+   :url "https://aqicn.org/city/hungary/szombathely"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 3.9},
+   :no2 {:v 5.2},
+   :o3 {:v 5.6},
+   :p {:v 1029.4},
+   :pm10 {:v 28},
+   :so2 {:v 1.9},
+   :t {:v 5.9},
+   :w {:v 0.2}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:56:43+09:00"}}}

@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 62,
+  :idx 3358,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.17712 20.19688],
+   :name "Szolnok, Szolnok, Hungary",
+   :url "https://aqicn.org/city/hungary/szolnok"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 8.1},
+   :no2 {:v 31.8},
+   :o3 {:v 1.6},
+   :p {:v 1025.1},
+   :pm10 {:v 62},
+   :so2 {:v 5.9},
+   :t {:v 9.5},
+   :w {:v 0.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:50:20+09:00"}}}

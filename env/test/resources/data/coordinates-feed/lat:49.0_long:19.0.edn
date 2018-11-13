@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 85,
+  :idx 3140,
+  :attributions
+  [{:url "http://worldweather.wmo.int",
+    :name
+    "World Meteorological Organization - surface synoptic observations (WMO-SYNOP)"}
+   {:url "http://www.shmu.sk/sk/",
+    :name
+    "Slovak hydrometeorological institute (Slovenský hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.0578053 18.9198444],
+   :name "Jesenskeho, Martin, Slovakia",
+   :url "https://aqicn.org/city/slovakia/martin/jesenskeho"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 14.2},
+   :pm10 {:v 49},
+   :w {:v 4},
+   :pm25 {:v 85},
+   :co {:v 5.9},
+   :h {:v 74},
+   :so2 {:v 8.7},
+   :t {:v 12.3},
+   :p {:v 988.3}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T06:46:41+09:00"}}}

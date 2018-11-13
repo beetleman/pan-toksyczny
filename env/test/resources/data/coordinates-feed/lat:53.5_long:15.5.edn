@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 11,
+  :idx 6560,
+  :attributions
+  [{:url "http://www.zgora.pios.gov.pl/category/monitoring/powietrze/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska w Zielonej Górze"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.73821389 15.22866667],
+   :name "Gorzów Wielkopolski, Poland",
+   :url "https://aqicn.org/city/poland/lubuski/gorzow-wielkopolski"},
+  :dominentpol "o3",
+  :iaqi
+  {:dew {:v 6.1},
+   :r {:v 0.5},
+   :no2 {:v 8.7},
+   :o3 {:v 11.3},
+   :pm10 {:v 6},
+   :w {:v 0.357439},
+   :co {:v 2.5},
+   :wd {:v 167.725},
+   :h {:v 90.48},
+   :so2 {:v 6},
+   :t {:v 7.70389},
+   :p {:v 1021.92}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:17:46+09:00"}}}

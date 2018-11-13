@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 51,
+  :idx 2786,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.24224 17.19018],
+   :name "Jesenik, Olomoucky, Czech Republic",
+   :url "https://aqicn.org/city/czechrepublic/olomoucky/jesenik"},
+  :dominentpol "pm25",
+  :iaqi
+  {:h {:v 94.6},
+   :no2 {:v 2.4},
+   :o3 {:v 24.5},
+   :p {:v 1028.3},
+   :pm10 {:v 8},
+   :pm25 {:v 51},
+   :so2 {:v 0.7}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T07:41:31+09:00"}}}

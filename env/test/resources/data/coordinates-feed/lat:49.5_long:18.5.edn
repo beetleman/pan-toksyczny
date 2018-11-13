@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 53,
+  :idx 2793,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.50261 18.53856],
+   :name "Bily Kriz, Moravskoslezsky, Czech Republic",
+   :url
+   "https://aqicn.org/city/czechrepublic/moravskoslezsky/bily-kriz"},
+  :dominentpol "pm25",
+  :iaqi
+  {:h {:v 24.7},
+   :no2 {:v 4.6},
+   :o3 {:v 13.9},
+   :p {:v 1026.9},
+   :pm10 {:v 14},
+   :pm25 {:v 53},
+   :so2 {:v 0.7},
+   :t {:v 10.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:45:40+09:00"}}}

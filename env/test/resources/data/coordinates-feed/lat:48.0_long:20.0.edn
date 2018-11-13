@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 68,
+  :idx 3874,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.09444 19.80276],
+   :name "Salgótarján, Salgótarján, Hungary",
+   :url "https://aqicn.org/city/hungary/salgotarjan"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 14.4},
+   :dew {:v 6.4},
+   :h {:v 83.2},
+   :no2 {:v 9.1},
+   :o3 {:v 8.4},
+   :pm10 {:v 68},
+   :so2 {:v 3},
+   :t {:v 9.1}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:50:23+09:00"}}}

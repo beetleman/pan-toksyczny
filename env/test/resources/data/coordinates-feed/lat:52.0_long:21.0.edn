@@ -1,0 +1,31 @@
+{:status "ok",
+ :data
+ {:aqi 58,
+  :idx 9449,
+  :attributions
+  [{:url "http://sojp.wios.warszawa.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Warsaw (Wojewódzki Inspektorat Ochrony Środowiska w Warszawie)"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.080625 21.111186],
+   :name "Wierzejewskiego, Konstancin-Jeziorna, Mazowieckie, Poland",
+   :url
+   "https://aqicn.org/city/poland/mazowieckie/konstancin-jeziorna/wierzejewskiego"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 5.4},
+   :o3 {:v 12.4},
+   :pm10 {:v 18},
+   :w {:v 1.2},
+   :wg {:v 2.4},
+   :pm25 {:v 58},
+   :co {:v 3.1},
+   :so2 {:v 2.7},
+   :t {:v 9.4},
+   :p {:v 1021.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:33:23+09:00"}}}

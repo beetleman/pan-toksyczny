@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 75,
+  :idx 6540,
+  :attributions
+  [{:url "http://powietrze.katowice.wios.gov.pl/",
+    :name "Świętokrzyski Monitoring network"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.264611 18.975028],
+   :name "Katowice, ul Kossutha 6, Poland",
+   :url
+   "https://aqicn.org/city/poland/slaski/katowice--ul-kossutha-6"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 9},
+   :o3 {:v 16},
+   :pm10 {:v 18},
+   :w {:v 0.4},
+   :wg {:v 2.6},
+   :pm25 {:v 75},
+   :h {:v 87.3},
+   :so2 {:v 3.9},
+   :t {:v 8.8},
+   :p {:v 1022.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:39:15+09:00"}}}

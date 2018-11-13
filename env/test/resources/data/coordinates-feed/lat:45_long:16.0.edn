@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 34,
+  :idx 5159,
+  :attributions
+  [{:url "http://iszz.azo.hr/iskzl/",
+    :name "Croatian Environment Agency - Agencija za zaštitu okoliša"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.458125 16.388355555556],
+   :name "Sisak-1, Croatia",
+   :url "https://aqicn.org/city/croatia/sisak-1"},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 0.1},
+   :h {:v 67.3},
+   :p {:v 1024.8},
+   :pm10 {:v 34},
+   :so2 {:v 2},
+   :t {:v 15.5},
+   :w {:v 0.3},
+   :wg {:v 3.3}},
+  :time {:s "2018-11-13 19:00:00", :tz "+01:00", :v 1542135600},
+  :debug {:sync "2018-11-14T03:39:14+09:00"}}}

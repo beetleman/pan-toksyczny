@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 85,
+  :idx 3118,
+  :attributions
+  [{:url "http://www.shmu.sk/sk/",
+    :name
+    "Slovak hydrometeorological institute (Slovenský hydrometeorologický ústav)"}
+   {:url "http://worldweather.wmo.int",
+    :name
+    "World Meteorological Organization - surface synoptic observations (WMO-SYNOP)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.558752 19.1545153],
+   :name "J. Alexyho, Zvolen, Slovakia",
+   :url "https://aqicn.org/city/slovakia/zvolen/j.-alexyho"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 19.7},
+   :pm10 {:v 34},
+   :w {:v 3},
+   :pm25 {:v 85},
+   :co {:v 4.7},
+   :h {:v 66.9},
+   :so2 {:v 5.1},
+   :t {:v 12.8},
+   :p {:v 987.8}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T06:46:56+09:00"}}}

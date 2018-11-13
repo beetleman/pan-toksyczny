@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 18,
+  :idx 6536,
+  :attributions
+  [{:url "http://powietrze.katowice.wios.gov.pl/",
+    :name "Świętokrzyski Monitoring network"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.836389 19.130111],
+   :name "Częstochowa, ul. Baczyńskiego 2, Poland",
+   :url
+   "https://aqicn.org/city/poland/slaski/czestochowa--ul.-baczynskiego-2"},
+  :dominentpol "o3",
+  :iaqi
+  {:co {:v 1.9},
+   :no2 {:v 4.1},
+   :o3 {:v 17.8},
+   :pm10 {:v 11},
+   :so2 {:v 2.5},
+   :w {:v 4.1}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:39:18+09:00"}}}

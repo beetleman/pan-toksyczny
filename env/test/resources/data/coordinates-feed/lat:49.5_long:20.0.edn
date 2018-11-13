@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 31,
+  :idx 9040,
+  :attributions
+  [{:url "http://monitoring.krakow.pios.gov.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Krakow (WIOŚ - Wojewódzki Inspektorat Ochrony Środowiska w Krakowie)"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.483593 20.028785],
+   :name "Nowy Targ, Pl. Słowackiego, Małopolska, Poland",
+   :url
+   "https://aqicn.org/city/poland/malopolska/nowy-targ--pl.-slowackiego"},
+  :dominentpol "pm10",
+  :iaqi
+  {:dew {:v 7.1},
+   :no2 {:v 3.4},
+   :o3 {:v 14.1},
+   :pm10 {:v 31},
+   :co {:v 7.7},
+   :h {:v 92.1},
+   :so2 {:v 4.4},
+   :t {:v 8.3},
+   :p {:v 926.4}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:17:56+09:00"}}}

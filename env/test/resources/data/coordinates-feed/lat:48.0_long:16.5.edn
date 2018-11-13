@@ -1,0 +1,17 @@
+{:status "ok",
+ :data
+ {:aqi 18,
+  :idx 2838,
+  :attributions
+  [{:url "http://www.umweltbundesamt.at/",
+    :name "Umweltbundesamt -Aktuelle Luftgütemesswerte"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.086111111 16.433333333],
+   :name "Am Alten Markt, Austria",
+   :url "https://aqicn.org/city/austria/am-alten-markt"},
+  :dominentpol "pm10",
+  :iaqi {:p {:v 1024.9}, :pm10 {:v 18}, :t {:v 12.2}, :wg {:v 0.1}},
+  :time {:s "2018-11-13 21:00:00", :tz "+01:00", :v 1542142800},
+  :debug {:sync "2018-11-14T05:42:56+09:00"}}}

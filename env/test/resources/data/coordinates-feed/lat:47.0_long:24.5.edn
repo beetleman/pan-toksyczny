@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 30,
+  :idx 8578,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.1295552 24.4997634],
+   :name "Str. Parcului, Bistriţa, Romania",
+   :url
+   "https://aqicn.org/city/romania/bistrita-nasaud/bistrita/str.-parcului"},
+  :dominentpol "pm10",
+  :iaqi
+  {:h {:v 70.6},
+   :no2 {:v 15.2},
+   :o3 {:v 1.2},
+   :p {:v 1029.1},
+   :pm10 {:v 30},
+   :so2 {:v 3.1},
+   :t {:v 1.1}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:37:01+09:00"}}}

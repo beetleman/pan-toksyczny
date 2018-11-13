@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 82,
+  :idx 3124,
+  :attributions
+  [{:url "http://worldweather.wmo.int",
+    :name
+    "World Meteorological Organization - surface synoptic observations (WMO-SYNOP)"}
+   {:url "http://www.shmu.sk/sk/",
+    :name
+    "Slovak hydrometeorological institute (Slovenský hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.2861955 18.1383259],
+   :name "Janikovce, Nitra, Slovakia",
+   :url "https://aqicn.org/city/slovakia/nitra/janikovce"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 6},
+   :pm10 {:v 29},
+   :w {:v 2},
+   :pm25 {:v 82},
+   :co {:v 5.9},
+   :h {:v 67.8},
+   :so2 {:v 2.6},
+   :t {:v 12.8},
+   :p {:v 1009.6}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T07:40:26+09:00"}}}

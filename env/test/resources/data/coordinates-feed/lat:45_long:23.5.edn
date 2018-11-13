@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 34,
+  :idx 8581,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.0470586 23.2732453],
+   :name "Str. Vasile Alecsandri, Târgu Jiu, Romania",
+   :url
+   "https://aqicn.org/city/romania/gorj/targu-jiu/str.-vasile-alecsandri"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 5.9},
+   :o3 {:v 1.9},
+   :p {:v 1028.7},
+   :pm10 {:v 34},
+   :so2 {:v 7.8},
+   :t {:v 8.8},
+   :w {:v 0.2}},
+  :time {:s "2018-11-14 01:00:00", :tz "+02:00", :v 1542157200},
+  :debug {:sync "2018-11-14T08:33:14+09:00"}}}

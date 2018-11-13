@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 6,
+  :idx 3344,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.871158 17.273464],
+   :name "Mosonmagyaróvár, Mosonmagyaróvár, Hungary",
+   :url "https://aqicn.org/city/hungary/mosonmagyarovar"},
+  :dominentpol "co",
+  :iaqi
+  {:co {:v 5.7},
+   :h {:v 90.5},
+   :no2 {:v 8.4},
+   :pm10 {:v 31},
+   :so2 {:v 1.4},
+   :w {:v 4.9}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:52:32+09:00"}}}

@@ -1,0 +1,30 @@
+{:status "ok",
+ :data
+ {:aqi 124,
+  :idx 3122,
+  :attributions
+  [{:url "http://worldweather.wmo.int",
+    :name
+    "World Meteorological Organization - surface synoptic observations (WMO-SYNOP)"}
+   {:url "http://www.shmu.sk/sk/",
+    :name
+    "Slovak hydrometeorological institute (Slovenský hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.673558 21.1658161],
+   :name "Letna, Velka Ida, Slovakia",
+   :url "https://aqicn.org/city/slovakia/velka-ida/letna"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 34.8},
+   :pm10 {:v 61},
+   :w {:v 2},
+   :pm25 {:v 124},
+   :co {:v 2.5},
+   :h {:v 63.9},
+   :so2 {:v 12.2},
+   :t {:v 11.5},
+   :p {:v 998.1}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:41:29+09:00"}}}

@@ -1,0 +1,24 @@
+{:status "ok",
+ :data
+ {:aqi 16,
+  :idx 4729,
+  :attributions
+  [{:url "http://www.umweltbundesamt.at/",
+    :name "Umweltbundesamt -Aktuelle Luftgütemesswerte"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [48.143612 16.959444],
+   :name "Parkplatz Bezirkskrankenhaus, Florianistraße, Austria",
+   :url
+   "https://aqicn.org/city/austria/parkplatz-bezirkskrankenhaus--florianistrasse"},
+  :dominentpol "pm10",
+  :iaqi
+  {:no2 {:v 13.8},
+   :pm10 {:v 16},
+   :so2 {:v 1.1},
+   :t {:v 9.1},
+   :w {:v 3.3},
+   :wg {:v 5.7}},
+  :time {:s "2018-11-13 21:00:00", :tz "+01:00", :v 1542142800},
+  :debug {:sync "2018-11-14T05:43:23+09:00"}}}

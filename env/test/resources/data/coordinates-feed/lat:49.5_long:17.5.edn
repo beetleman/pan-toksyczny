@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 117,
+  :idx 2788,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.451656 17.454159],
+   :name "Prerov, Olomoucky, Czech Republic",
+   :url "https://aqicn.org/city/czechrepublic/olomoucky/prerov"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 11},
+   :o3 {:v 2.7},
+   :pm10 {:v 53},
+   :w {:v 0.6},
+   :wg {:v 10.3},
+   :pm25 {:v 117},
+   :so2 {:v 0.7},
+   :t {:v 9.8},
+   :p {:v 1029.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:40:49+09:00"}}}

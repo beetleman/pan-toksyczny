@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 90,
+  :idx 2776,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.165261 16.580812],
+   :name "Brno-Lany, Jihomoravsky, Czech Republic",
+   :url "https://aqicn.org/city/czechrepublic/jihomoravsky/brno-lany"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 21.2},
+   :o3 {:v 1.8},
+   :pm10 {:v 30},
+   :w {:v 4.8},
+   :wg {:v 7.2},
+   :pm25 {:v 90},
+   :h {:v 90.1},
+   :so2 {:v 1.4},
+   :t {:v 8.1}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:40:44+09:00"}}}

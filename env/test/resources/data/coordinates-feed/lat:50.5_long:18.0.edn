@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 14,
+  :idx 6555,
+  :attributions
+  [{:url "http://www.opole.pios.gov.pl/",
+    :name "Wojewódzki Inspektorat Ochrony Środowiska Opolskie"}
+   {:url "http://powietrze.gios.gov.pl/",
+    :name "Główny inspektorat ochrony środowiska"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.42353333 18.12073889],
+   :name "Zdzieszowice, Poland",
+   :url "https://aqicn.org/city/poland/opolski/zdzieszowice"},
+  :dominentpol "pm10",
+  :iaqi
+  {:dew {:v 7.9},
+   :h {:v 89.1},
+   :no2 {:v 4.3},
+   :p {:v 1007.3},
+   :pm10 {:v 14},
+   :r {:v 0.1},
+   :so2 {:v 4.5},
+   :t {:v 9.6}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:10:04+09:00"}}}

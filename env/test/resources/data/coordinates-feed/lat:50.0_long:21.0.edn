@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 80,
+  :idx 8690,
+  :attributions
+  [{:url "http://monitoring.krakow.pios.gov.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Krakow (WIOŚ - Wojewódzki Inspektorat Ochrony Środowiska w Krakowie)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.018263 20.99258],
+   :name "Tarnów-ul. Ks. Romana Sitko, Małopolska, Poland",
+   :url
+   "https://aqicn.org/city/poland/malopolska/tarnow-ul.-ks.-romana-sitko"},
+  :dominentpol "pm25",
+  :iaqi
+  {:co {:v 7.6},
+   :no2 {:v 5.2},
+   :o3 {:v 12.4},
+   :p {:v 1023.9},
+   :pm10 {:v 28},
+   :pm25 {:v 80},
+   :so2 {:v 3.2}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:18:23+09:00"}}}

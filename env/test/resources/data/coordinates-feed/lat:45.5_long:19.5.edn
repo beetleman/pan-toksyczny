@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 4,
+  :idx 8576,
+  :attributions
+  [{:url "http://www.sepa.gov.rs/",
+    :name
+    "SEPA - Serbian National Air Monitoring network (Državna mreža za automatski monitoring kvaliteta vazduha)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [45.208369 19.721438],
+   :name "Centar, Beočin, Serbia",
+   :url "https://aqicn.org/city/serbia/beocin/centar"},
+  :dominentpol "so2",
+  :iaqi
+  {:no2 {:v 16},
+   :o3 {:v 24.8},
+   :pm10 {:v 19},
+   :w {:v 0.5},
+   :wg {:v 0.1},
+   :pm25 {:v 58},
+   :co {:v 3.4},
+   :so2 {:v 4},
+   :t {:v 13.3},
+   :p {:v 1018.3}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:29:50+09:00"}}}

@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 54,
+  :idx 6798,
+  :attributions
+  [{:url "http://wios.bydgoszcz.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Bydgoszczy (Wojewódzki Inspektorat Ochrony Środowiska w Bydgoszczy)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [52.822777777778 17.858888888889],
+   :name "airp. Lafarge, Poland",
+   :url "https://aqicn.org/city/poland/bydgoszcz/airp.-lafarge"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 4},
+   :o3 {:v 9.4},
+   :pm10 {:v 14},
+   :w {:v 0.2},
+   :pm25 {:v 54},
+   :co {:v 6.6},
+   :so2 {:v 1.8},
+   :t {:v 8.3},
+   :p {:v 1017.5}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T06:14:50+09:00"}}}

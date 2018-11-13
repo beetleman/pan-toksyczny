@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 60,
+  :idx 3346,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.916667 16.316667],
+   :name "Farkasfa, Farkasfa, Hungary",
+   :url
+   "https://aqicn.org/city/hungary/szentgotthard/szentgotthard--fuzesi-ut-7."},
+  :dominentpol "pm25",
+  :iaqi
+  {:dew {:v 7.9},
+   :h {:v 100},
+   :o3 {:v 6.9},
+   :p {:v 991.4},
+   :pm10 {:v 20},
+   :pm25 {:v 60},
+   :t {:v 7.9}},
+  :time {:s "2018-11-13 22:00:00", :tz "+02:00", :v 1542146400},
+  :debug {:sync "2018-11-14T07:53:55+09:00"}}}

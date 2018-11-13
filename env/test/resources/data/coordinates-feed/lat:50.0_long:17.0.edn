@@ -1,0 +1,25 @@
+{:status "ok",
+ :data
+ {:aqi 55,
+  :idx 10499,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.971583 16.978472],
+   :name "Sumperk - 5.ZS, Olomoucky, Czech Republic",
+   :url "https://aqicn.org/city/czechrepublic/olomoucky/sumperk-5.zs"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 9.5},
+   :o3 {:v 8.2},
+   :p {:v 1024.9},
+   :pm10 {:v 15},
+   :pm25 {:v 55},
+   :so2 {:v 0.7},
+   :t {:v 9.4}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T08:05:38+09:00"}}}

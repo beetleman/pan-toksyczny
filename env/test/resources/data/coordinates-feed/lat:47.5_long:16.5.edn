@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 20,
+  :idx 3345,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.6913 16.57548],
+   :name "Sopron, Sopron, Hungary",
+   :url "https://aqicn.org/city/hungary/sopron"},
+  :dominentpol "o3",
+  :iaqi
+  {:o3 {:v 19.5},
+   :pm10 {:v 19},
+   :w {:v 0.9},
+   :wg {:v 6.6},
+   :co {:v 1.8},
+   :h {:v 88.5},
+   :so2 {:v 2.4},
+   :t {:v 9.4},
+   :p {:v 1030.7}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:50:51+09:00"}}}

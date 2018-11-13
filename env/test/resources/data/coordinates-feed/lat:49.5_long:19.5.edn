@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 11,
+  :idx 10043,
+  :attributions
+  [{:url "http://monitoring.krakow.pios.gov.pl/",
+    :name
+    "Regional Inspectorate for Environmental Protection in Krakow (WIOŚ - Wojewódzki Inspektorat Ochrony Środowiska w Krakowie)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.743111 19.600399],
+   :name "Sucha Beskidzka, ul. Nieszczyńskiej, Małopolska, Poland",
+   :url
+   "https://aqicn.org/city/poland/malopolska/sucha-beskidzka--ul.-nieszczynskiej"},
+  :dominentpol "o3",
+  :iaqi
+  {:co {:v 10.8},
+   :no2 {:v 5.1},
+   :o3 {:v 10.9},
+   :pm10 {:v 5},
+   :pm25 {:v 119},
+   :so2 {:v 5.1},
+   :w {:v 5.1}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:14:41+09:00"}}}

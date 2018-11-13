@@ -1,0 +1,28 @@
+{:status "ok",
+ :data
+ {:aqi 31,
+  :idx 6545,
+  :attributions
+  [{:url "http://powietrze.katowice.wios.gov.pl/",
+    :name "Świętokrzyski Monitoring network"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [50.710889 19.458797],
+   :name "Złoty Potok, leśniczówka Kamienna Góra, Poland",
+   :url
+   "https://aqicn.org/city/poland/slaski/zloty-potok--lesniczowka-kamienna-gora"},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 3.1},
+   :o3 {:v 23.6},
+   :pm10 {:v 10},
+   :w {:v 0.2},
+   :wg {:v 1.8},
+   :pm25 {:v 31},
+   :h {:v 94.3},
+   :so2 {:v 2},
+   :t {:v 8.3},
+   :p {:v 1025.9}},
+  :time {:s "2018-11-13 22:00:00", :tz "+01:00", :v 1542146400},
+  :debug {:sync "2018-11-14T08:39:05+09:00"}}}

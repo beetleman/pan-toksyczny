@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 62,
+  :idx 3366,
+  :attributions
+  [{:url "http://www.levegominoseg.hu/",
+    :name
+    "Hungarian Air Quality Network (Maďarský systém na meranie znečistenia vzduchu)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [47.773969 19.139816],
+   :name "Vác, Csányi krt., Vác, Hungary",
+   :url "https://aqicn.org/city/hungary/vac/vac--csanyi-krt."},
+  :dominentpol "pm10",
+  :iaqi
+  {:co {:v 7.1},
+   :h {:v 83.4},
+   :no2 {:v 103.5},
+   :o3 {:v 11.3},
+   :p {:v 1026.3},
+   :pm10 {:v 62},
+   :t {:v 10.5},
+   :w {:v 1.8}},
+  :time {:s "2018-11-13 23:00:00", :tz "+02:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:53:54+09:00"}}}

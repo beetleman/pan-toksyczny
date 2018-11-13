@@ -1,0 +1,27 @@
+{:status "ok",
+ :data
+ {:aqi 76,
+  :idx 8711,
+  :attributions
+  [{:url "http://portal.chmi.cz/",
+    :name
+    "Czech Hydrometeorological Institute (Český hydrometeorologický ústav)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [49.758994 16.666722],
+   :name "Moravska Trebova - Piaristicka., Pardubicky, Czech Republic",
+   :url
+   "https://aqicn.org/city/czechrepublic/pardubicky/moravska-trebova-piaristicka."},
+  :dominentpol "pm25",
+  :iaqi
+  {:no2 {:v 6.7},
+   :o3 {:v 6.9},
+   :p {:v 1024.8},
+   :pm10 {:v 22},
+   :pm25 {:v 76},
+   :t {:v 9.6},
+   :w {:v 3.8},
+   :wg {:v 9.7}},
+  :time {:s "2018-11-13 23:00:00", :tz "+01:00", :v 1542150000},
+  :debug {:sync "2018-11-14T07:41:07+09:00"}}}

@@ -1,0 +1,26 @@
+{:status "ok",
+ :data
+ {:aqi 52,
+  :idx 4187,
+  :attributions
+  [{:url "http://www.calitateaer.ro/",
+    :name
+    "ANPM - Agenţiei Naţionale pentru Protecţia Mediului (Romanian National Environmental Protection Agency)"}
+   {:url "https://waqi.info/",
+    :name "World Air Quality Index Project"}],
+  :city
+  {:geo [46.1580215 24.3344084],
+   :name "Str. Gării, Mediaş, Romania",
+   :url "https://aqicn.org/city/romania/sibiu/medias/str.-garii"},
+  :dominentpol "pm10",
+  :iaqi
+  {:dew {:v 0.9},
+   :h {:v 95.8},
+   :no2 {:v 15.6},
+   :o3 {:v 3},
+   :p {:v 988.1},
+   :pm10 {:v 52},
+   :so2 {:v 2.9},
+   :t {:v 1.5}},
+  :time {:s "2018-11-14 00:00:00", :tz "+02:00", :v 1542153600},
+  :debug {:sync "2018-11-14T07:57:35+09:00"}}}
