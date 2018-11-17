@@ -17,8 +17,8 @@
                  [luminus/ring-ttl-session "0.3.2"]
                  [markdown-clj "1.0.5"]
                  [metosin/muuntaja "0.6.1"]
-                 [metosin/reitit "0.2.6"]
-                 [metosin/ring-http-response "0.9.0"]
+                 [metosin/reitit "0.2.7"]
+                 [metosin/ring-http-response "0.9.1"]
                  [mount "0.1.14"]
                  [nrepl "0.4.5"]
                  [org.clojure/clojure "1.9.0"]
@@ -46,7 +46,7 @@
 
   :plugins [[lein-immutant "2.1.0"]
             [lein-ancient "0.6.15"]
-            [lein-kibit "0.1.2"]]
+            [lein-kibit "0.1.6"]]
 
   :profiles
   {:uberjar {:omit-source true
