@@ -1,0 +1,6 @@
+FROM clojure:lein
+
+WORKDIR /project
+ADD . /project
+
+CMD ["lein", "test"]

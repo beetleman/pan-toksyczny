@@ -1,0 +1,20 @@
+stages:
+  - test
+
+image: docker
+
+services:
+  - docker:dind
+
+before_script:
+  - apk add --no-cache py-pip
+  - pip install docker-compose
+
+test-job:
+  stage: test
+  script:
+    - echo "---> Building test image and running tests"
+    - docker-compose --project-name=$CI_BUILD_ID build tests-pipeline
+    - docker-compose --project-name=$CI_BUILD_ID run --rm tests-pipeline
+  after_script:
+    - docker-compose --project-name=$CI_BUILD_ID down -v --rmi local

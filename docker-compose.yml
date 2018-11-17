@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  tests:
-    image: clojure:lein
-    volumes:
-      - ./:$PWD
-    working_dir: $PWD
-    environment:
-      - AQICN_TOKEN=$AQICN_TOKEN
-      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
-    tty: true
-    command: lein test-refresh
-
   repl:
     image: clojure:lein
     volumes:
@@ -24,3 +13,19 @@ services:
       - "3000:3000"
       - "7000:7000"
     command: lein repl :headless :host 0.0.0.0 :port 7000
+
+  tests:
+    image: clojure:lein
+    volumes:
+      - ./:$PWD
+    working_dir: $PWD
+    environment:
+      - AQICN_TOKEN=$AQICN_TOKEN
+      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
+    tty: true
+    command: lein test-refresh
+
+  tests-pipeline:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.tests
