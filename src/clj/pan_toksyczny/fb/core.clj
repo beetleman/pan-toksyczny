@@ -3,6 +3,8 @@
             [pan-toksyczny.config :refer [env]]
             [pan-toksyczny.http :as http]
             [pan-toksyczny.fb.preprocessing :as preprocessing]
+            [pan-toksyczny.air-quality.core :as air-quality]
+            [pan-toksyczny.air-quality.interpreter :as interpreter]
             [sieppari.core :as sieppari]))
 
 
@@ -36,7 +38,9 @@
   [{coordinates ::preprocessing/data :as message}]
   (http/execute (messages/text (:page-access-token env)
                                (get-in message [:sender :id])
-                               (str coordinates))))
+                               (-> @(air-quality/coordinates-feed coordinates)
+                                   :aqi
+                                   interpreter/aqi->text))))
 
 (defmethod -handler :default [r] (println r (= ::preprocessing/text (::preprocessing/type r))))
 
