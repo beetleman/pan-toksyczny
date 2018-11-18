@@ -8,10 +8,13 @@
 (defn execute [{:keys [method url options]}]
   (p/promise
    (fn [resolve reject]
-     ((http-methods method) url
-                            (merge options
-                                   {:async? true
-                                    :accept :json
-                                    :as     :json})
-                            resolve
-                            reject))))
+     (let [http-method (get http-methods
+                            method
+                            (constantly nil))]
+       (http-method url
+                    (merge options
+                           {:async? true
+                            :accept :json
+                            :as     :json})
+                    resolve
+                    reject)))))

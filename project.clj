@@ -34,7 +34,8 @@
 
                  [org.immutant/web "2.1.10"]
                  [org.immutant/messaging "2.1.10"]
-                 [org.immutant/scheduling "2.1.10"]]
+                 [org.immutant/scheduling "2.1.10"]
+                 [metosin/sieppari "0.0.0-alpha6"]]
 
   :min-lein-version "2.0.0"
 
