@@ -27,5 +27,5 @@ build-job:
     - tags
   script:
     - echo "---> Build latest image"
-    - docker build --pull -t pan-toksyczny:latest .
-    - docker push pan-toksyczny:latest
+    - docker build -t registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest .
+    - docker push registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest
