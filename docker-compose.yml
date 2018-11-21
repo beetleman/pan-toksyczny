@@ -25,6 +25,9 @@ services:
     tty: true
     command: lein test-refresh
 
+  app:
+    build: .
+
   tests-pipeline:
     build:
       context: .
