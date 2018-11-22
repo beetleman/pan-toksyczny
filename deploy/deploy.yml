@@ -1,0 +1,26 @@
+---
+- hosts: all
+  tasks:
+    - name: copy docker files
+      copy:
+        src: ./docker-compose.yml
+        remote_src: false
+        dest: ~/docker-compose.yml
+    - name: create env with tokens
+      template:
+        src: ./env.j2
+        dest: ~/.env
+    - name: docker login
+      command: docker login -p "{{lookup('env','GITLAB_PASSWORD')}}" -u "{{lookup('env','GITLAB_USER')}}" registry.gitlab.com
+    - name: pull images
+      command: docker-compose pull
+      args:
+        chdir: ~/
+    - name: kill services
+      command: docker-compose kill
+      args:
+        chdir: ~/
+    - name: up services
+      command: docker-compose up -d
+      args:
+        chdir: ~/

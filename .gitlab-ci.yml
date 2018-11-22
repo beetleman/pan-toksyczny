@@ -1,6 +1,7 @@
 stages:
   - test
   - build
+  - deploy
 
 image: docker
 
@@ -9,7 +10,7 @@ services:
 
 before_script:
   - apk add --no-cache py-pip
-  - pip install docker-compose
+  - pip install docker-compose ansible
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
 
 test-job:
@@ -29,3 +30,11 @@ build-job:
     - echo "---> Build latest image"
     - docker build -t registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest .
     - docker push registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest
+
+deploy-job:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - echo "---> deploy on ${DEPLOY_HOST}"
+    - ansible-playbook --inventory=${DEPLOY_HOST}, --extra-vars "ansible_user=${DEPLOY_USER} ansible_password=${DEPLOY_PASSWORD}" deploy/deploy.yml
