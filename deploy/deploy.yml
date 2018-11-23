@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  vars:
+    ansible_user: "{{ lookup('env', 'DEPLOY_USER')}}"
+    ansible_password: "{{ lookup('env', 'DEPLOY_PASSWORD')}}"
   tasks:
     - name: copy docker files
       copy:

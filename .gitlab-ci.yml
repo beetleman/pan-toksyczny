@@ -39,4 +39,5 @@ deploy-job:
     - web
   script:
     - echo "---> deploy on ${DEPLOY_HOST}"
-    - ansible-playbook --inventory=${DEPLOY_HOST}, --extra-vars "ansible_user=${DEPLOY_USER} ansible_password=${DEPLOY_PASSWORD}" deploy/deploy.yml
+    - ping -w 5 ${DEPLOY_HOST}
+    - ansible-playbook --inventory=${DEPLOY_HOST}, deploy/deploy.yml
