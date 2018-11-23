@@ -5,3 +5,6 @@ services:
     image: registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest
     ports:
       - "3000:3000"
+    environment:
+      - AQICN_TOKEN=$AQICN_TOKEN
+      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
