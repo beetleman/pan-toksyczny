@@ -26,6 +26,7 @@ build-job:
   stage: build
   only:
     - tags
+    - web
   script:
     - echo "---> Build latest image"
     - docker build -t registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest .
@@ -35,6 +36,7 @@ deploy-job:
   stage: deploy
   only:
     - tags
+    - web
   script:
     - echo "---> deploy on ${DEPLOY_HOST}"
     - ansible-playbook --inventory=${DEPLOY_HOST}, --extra-vars "ansible_user=${DEPLOY_USER} ansible_password=${DEPLOY_PASSWORD}" deploy/deploy.yml
