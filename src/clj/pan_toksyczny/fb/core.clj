@@ -5,7 +5,8 @@
             [pan-toksyczny.fb.preprocessing :as preprocessing]
             [pan-toksyczny.air-quality.core :as air-quality]
             [pan-toksyczny.air-quality.interpreter :as interpreter]
-            [sieppari.core :as sieppari]))
+            [sieppari.core :as sieppari]
+            [mount.core :as mount]))
 
 
 ;TODO: refactor it!!
@@ -58,3 +59,8 @@
                            message-type-interceptor
                            handler]
                           message)))))
+
+(mount/defstate persistent-menu
+  :start (let [action (messages/persistent-menu (:page-access-token env)
+                                                ["Check it!"])]
+           @(http/execute action)))
