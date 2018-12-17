@@ -6,31 +6,31 @@
   :local-repo "./.m2"
   :repositories {"sonatype-oss-public" "https://oss.sonatype.org/content/groups/public/"}
   :dependencies [[clojure.java-time "0.3.2"]
-                 [com.fasterxml.jackson.core/jackson-core "2.9.7"]
-                 [com.fasterxml.jackson.datatype/jackson-datatype-jdk8 "2.9.7"]
+                 [com.fasterxml.jackson.core/jackson-core "2.9.8"]
+                 [com.fasterxml.jackson.datatype/jackson-datatype-jdk8 "2.9.8"]
                  [com.h2database/h2 "1.4.197"]
                  [conman "0.8.3"]
                  [cprop "0.1.13"]
                  [luminus-immutant "0.2.4" :exclusions [org.immutant/web]]
-                 [luminus-migrations "0.6.1"]
+                 [luminus-migrations "0.6.3"]
                  [luminus-transit "0.1.1"]
                  [luminus/ring-ttl-session "0.3.2"]
                  [markdown-clj "1.0.5"]
-                 [metosin/muuntaja "0.6.1"]
-                 [metosin/reitit "0.2.7"]
+                 [metosin/muuntaja "0.6.3"]
+                 [metosin/reitit "0.2.9"]
                  [metosin/ring-http-response "0.9.1"]
-                 [mount "0.1.14"]
-                 [nrepl "0.4.5"]
-                 [org.clojure/clojure "1.9.0"]
+                 [mount "0.1.15"]
+                 [nrepl "0.5.3"]
+                 [org.clojure/clojure "1.10.0"]
                  [org.clojure/tools.cli "0.4.1"]
                  [org.clojure/tools.logging "0.4.1"]
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [selmer "1.12.3"]
+                 [selmer "1.12.5"]
                  [clj-http "3.9.1"]
 
                  [funcool/promesa "1.9.0"]
-                 [funcool/cats "2.3.1"]
+                 [funcool/cats "2.3.2"]
 
                  [org.immutant/web "2.1.10"]
                  [org.immutant/messaging "2.1.10"]
@@ -66,7 +66,7 @@
                                  [ring/ring-devel "1.7.1"]
                                  [ring/ring-mock "0.3.2"]
 
-                                 [nrepl "0.4.5"] ; emacs/cider
+                                 [nrepl "0.5.3"] ; emacs/cider
                                  ]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.23.0"]
 
