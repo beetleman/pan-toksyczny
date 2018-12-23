@@ -1,0 +1,37 @@
+{
+  "object": "page",
+  "entry": [
+    {
+      "id": "322784211649293",
+      "time": 1545574887587,
+      "messaging": [
+        {
+          "sender": {
+            "id": "2192766900756024"
+          },
+          "recipient": {
+            "id": "322784211649293"
+          },
+          "timestamp": 1545574886717,
+          "message": {
+            "mid": "0h5zybYelBoLgikWmhW2szL5rcnAhHACRPGvrya3NqTf__R587uVAHUWkAjBNSMWbCPSRh9J1w1u5asaGfQbpg",
+            "seq": 276334,
+            "attachments": [
+              {
+                "title": "Beetleman's Location",
+                "url": "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.bing.com%2Fmaps%2Fdefault.aspx%3Fv%3D2%26pc%3DFACEBK%26mid%3D8100%26where1%3D48.2242784%252C%2B12.2228064%26FORM%3DFBKPL1%26mkt%3Den-US&h=AT3HkFzpgXLNzU-meHy3t-c8fFd94XxSf22_uKHG5tjaDQKrYsucVi3tlvBMxJb7yM0-MtHk_qRZCD7chIggIPlgDQLjFLrR8iOcMzd333kmVv3EVDGh6DKgv6MjeUrxtkmh298EFdLbK_k&s=1",
+                "type": "location",
+                "payload": {
+                  "coordinates": {
+                    "lat": 48.2242784,
+                    "long": 12.2228064
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
