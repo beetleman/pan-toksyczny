@@ -1,31 +1,13 @@
 (ns pan-toksyczny.fb.core
-  (:require [pan-toksyczny.fb.messages :as messages]
-            [pan-toksyczny.config :refer [env]]
-            [pan-toksyczny.http :as http]
-            [pan-toksyczny.fb.preprocessing :as preprocessing]
+  (:require [mount.core :as mount]
             [pan-toksyczny.air-quality.core :as air-quality]
             [pan-toksyczny.air-quality.interpreter :as interpreter]
-            [sieppari.core :as sieppari]
-            [mount.core :as mount]))
-
-
-;TODO: refactor it!!
-
-(def user-intreceptor
-  {:enter identity})
-
-
-(def conversation-context-interceptor
-  {:enter identity})
-
-
-(def user-subscriptions-interceptor
-  {:enter identity})
-
-
-(def message-type-interceptor
-  {:enter #(update % :request preprocessing/message-type)})
-
+            [pan-toksyczny.config :refer [env]]
+            [pan-toksyczny.fb.interceptors :as interceptors]
+            [pan-toksyczny.fb.messages :as messages]
+            [pan-toksyczny.fb.preprocessing :as preprocessing]
+            [pan-toksyczny.http :as http]
+            [sieppari.core :as sieppari]))
 
 (defmulti -handler ::preprocessing/type)
 
@@ -49,18 +31,16 @@
   (-handler request))
 
 
-(defn process-message [{entry :entry object :object}]
-  (when (= object "page")
-    (doseq [events entry]
-      (doseq [message (:messaging events)]
-        (sieppari/execute [user-intreceptor
-                           conversation-context-interceptor
-                           user-subscriptions-interceptor
-                           message-type-interceptor
-                           handler]
-                          message)))))
+(defn process-message [message]
+  (sieppari/execute [interceptors/error
+                     interceptors/conform
+                     interceptors/user
+                     interceptors/conversation-context
+                     interceptors/message-type
+                     handler]
+                    message))
 
 (mount/defstate persistent-menu
   :start (let [action (messages/persistent-menu (:page-access-token env)
-                                                ["Check it!"])]
+                                                [["AQI?" ::aqi]])]
            @(http/execute action)))

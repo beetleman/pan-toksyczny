@@ -36,10 +36,13 @@
                          [{:content_type "location"}])))
 
 
-(defn- persistent-menu-item-nody [title]
-  {:title title,
-   :type "postback",
-   :payload title})
+(defn- persistent-menu-item-nody [item]
+  (let [[title payload] (if (coll? item)
+                          item
+                          [item item])]
+    {:title title,
+     :type "postback",
+     :payload (pr-str payload)}))
 
 (defn- persistent-menu-body [items composer-input-disabled]
   {:get_started {:payload "get_started"}
