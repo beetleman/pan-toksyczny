@@ -36,7 +36,7 @@
                      interceptors/conform
                      interceptors/user
                      interceptors/conversation-context
-                     interceptors/message-type
+                     ;; interceptors/message-flatten
                      handler]
                     message))
 

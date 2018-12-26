@@ -33,5 +33,6 @@
   {:enter identity})
 
 
-(def message-type
-  {:enter #(update % :request preprocessing/message-type)})
+(def message-flatten
+  {:enter (fn [ctx]
+            (update ctx :request preprocessing/message-flatten))})
