@@ -17,7 +17,7 @@
                  [luminus/ring-ttl-session "0.3.2"]
                  [markdown-clj "1.0.5"]
                  [metosin/muuntaja "0.6.3"]
-                 [metosin/reitit "0.2.9"]
+                 [metosin/reitit "0.2.10"]
                  [metosin/ring-http-response "0.9.1"]
                  [mount "0.1.15"]
                  [nrepl "0.5.3"]
@@ -60,7 +60,7 @@
    :test          [:project/dev :project/test :profiles/test]
 
    :project/dev  {:jvm-opts ["-Dconf=dev-config.edn"]
-                  :dependencies [[expound "0.7.1"]
+                  :dependencies [[expound "0.7.2"]
                                  [pjstadig/humane-test-output "0.9.0"]
                                  [prone "1.6.1"]
                                  [ring/ring-devel "1.7.1"]
