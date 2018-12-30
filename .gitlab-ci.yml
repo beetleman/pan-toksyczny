@@ -40,4 +40,4 @@ deploy-job:
   script:
     - echo "---> deploy on ${DEPLOY_HOST}"
     - ping -w 5 ${DEPLOY_HOST}
-    - ansible-playbook --inventory=${DEPLOY_HOST}, deploy/deploy.yml
+    - ansible-playbook --inventory=${DEPLOY_HOST}:${DEPLOY_PORT}, deploy/deploy.yml
