@@ -14,14 +14,16 @@
 
 (deftest page
   (testing "empty map is invalid"
-    (is (= (s/conform ::spec/page {})
-           ::s/invalid)))
+    (is (= ::s/invalid
+           (s/conform ::spec/page {}))))
 
   (testing "location"
     (let [conformed       (s/conform ::spec/page data/location)
           [type location] (messaging conformed)]
-      (is (= type :location))
-      (is (= location (messaging data/location)))))
+      (is (= :location
+             type))
+      (is (= (messaging data/location)
+             location))))
 
   (testing "corrupted location file"
     (let [data            (update-in data/location
@@ -29,11 +31,20 @@
                                      dissoc :sender)
           conformed       (s/conform ::spec/page data)
           [type location] (messaging conformed)]
-      (is (= type :unknown))
-      (is (= location (messaging data)))))
+      (is (= :unknown
+             type))
+      (is (= (messaging data)
+             location))))
 
   (testing "postback"
     (let [conformed       (s/conform ::spec/page data/postback)
           [type postback] (messaging conformed)]
-      (is (= type :postback))
-      (is (= postback (messaging data/postback))))))
+      (is (= :postback
+             type))
+      (is (= {:sender    {:id "2192766900756024"}
+              :recipient {:id "322784211649293"}
+              :timestamp 1545572708246
+              :postback
+              {:payload :pan-toksyczny.fb.core/aqi
+               :title   "AQI?"}}
+             postback)))))

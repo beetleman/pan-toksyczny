@@ -14,8 +14,8 @@
           },
           "timestamp": 1545572708246,
           "postback": {
-            "payload": "Check it!",
-            "title": "Check it!"
+            "payload": ":pan-toksyczny.fb.core/aqi",
+            "title": "AQI?"
           }
         }
       ]

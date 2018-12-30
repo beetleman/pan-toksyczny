@@ -11,16 +11,23 @@
 
 (deftest message-flatten
   (testing "flatten postback message"
-    (let [flatted (preprocessing/message-flatten conformed-postback)]
-      (is (coll? flatted))
-      (is (= :postback (-> flatted first ::preprocessing/type)))
-      (is (contains? (first flatted) :title))
-      (is (contains? (first flatted) :payload))))
+    (is (= [{:id                                 "322784211649293",
+             :time                                1545572708246,
+             :sender                              {:id "2192766900756024"},
+             :recipient                           {:id "322784211649293"},
+             :timestamp                           1545572708246,
+             :payload                             :pan-toksyczny.fb.core/aqi,
+             :title                               "AQI?",
+             :pan-toksyczny.fb.preprocessing/type :postback}]
+           (preprocessing/message-flatten conformed-postback))))
 
   (testing "flatten location message"
-    (let [flatted (preprocessing/message-flatten conformed-location)]
-      (println flatted)
-      (is (coll? flatted))
-      (is (= :location (-> flatted first ::preprocessing/type)))
-      (is (contains? (first flatted) :lat))
-      (is (contains? (first flatted) :long)))))
+    (is (= [{:id                  "322784211649293",
+             :time                1545574887587,
+             :sender              {:id "2192766900756024"},
+             :recipient           {:id "322784211649293"},
+             :timestamp           1545574886717,
+             :lat                 48.2242784,
+             :long                12.2228064,
+             ::preprocessing/type :location}]
+           (preprocessing/message-flatten conformed-location)))))

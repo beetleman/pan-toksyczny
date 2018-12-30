@@ -4,12 +4,19 @@
 (s/def ::id string?)
 (s/def ::time pos-int?)
 (s/def ::timestamp pos-int?)
+(s/def ::str->edn
+  (s/conformer
+   (fn [x]
+     (try
+       (read-string x)
+       (catch Exception _
+         ::s/invalid)))))
 
 (s/def ::sender (s/keys :req-un [::id]))
 (s/def ::recipient (s/keys :req-un [::id]))
 (s/def ::object #{"page"})
 
-(s/def :postback/payload string?)
+(s/def :postback/payload (s/and string? ::str->edn))
 (s/def :postback/title string?)
 (s/def ::postback
   (s/keys :req-un [:postback/payload
