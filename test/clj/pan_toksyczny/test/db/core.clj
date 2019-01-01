@@ -3,6 +3,7 @@
             [luminus-migrations.core :as migrations]
             [clojure.test :refer :all]
             [clojure.java.jdbc :as jdbc]
+            [conman.core :as conman]
             [pan-toksyczny.config :refer [env]]
             [mount.core :as mount]))
 
@@ -12,25 +13,36 @@
     (mount/start
       #'pan-toksyczny.config/env
       #'pan-toksyczny.db.core/*db*)
-    (migrations/migrate ["migrate"] (select-keys env [:database-url]))
-    (f)))
+    (migrations/migrate ["reset"] (select-keys env [:database-url]))
+    (binding [*ns* 'pan-toksyczny.db.core]
+      (conman/bind-connection pan-toksyczny.db.core/*db* "sql/queries.sql"))
+    (f)
+    (mount/stop #'pan-toksyczny.db.core/*db*)))
+
 
 (deftest test-users
   (jdbc/with-db-transaction [t-conn *db*]
     (jdbc/db-set-rollback-only! t-conn)
-    (is (= 1 (db/create-user!
-               t-conn
-               {:id         "1"
-                :first_name "Sam"
-                :last_name  "Smith"
-                :email      "sam.smith@example.com"
-                :pass       "pass"})))
-    (is (= {:id         "1"
-            :first_name "Sam"
-            :last_name  "Smith"
-            :email      "sam.smith@example.com"
-            :pass       "pass"
-            :admin      nil
-            :last_login nil
-            :is_active  nil}
-           (db/get-user t-conn {:id "1"})))))
+    (let [psid                 (str (rand-int 9999))
+          {id :id :as created} (db/create-user!
+                                t-conn
+                                {:psid psid})]
+      (testing "user creation"
+        (is (= #{:id
+                 :created_at}
+               (-> created keys set) ))
+
+        (is (= psid
+               (:psid (db/get-user t-conn {:id id})))))
+
+      (let [location {:lat  48.2242784
+                      :long 12.2228064
+                      :id   id}]
+
+        (testing "add location and get location"
+          (is (= 1 (db/set-location! t-conn location)))
+          (is (= location (db/get-location t-conn {:id id}))))
+
+        (testing "delete location"
+          (is (= 1 (db/delete-location! t-conn {:id id})))
+          (is (= nil (db/get-location t-conn {:id id}))))))))
