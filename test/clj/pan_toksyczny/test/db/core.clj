@@ -33,16 +33,16 @@
                (-> created keys set) ))
 
         (is (= psid
-               (:psid (db/get-user t-conn {:id id})))))
+               (:psid (db/get-user t-conn {:psid psid})))))
 
       (let [location {:lat  48.2242784
                       :long 12.2228064
-                      :id   id}]
+                      :psid psid}]
 
         (testing "add location and get location"
           (is (= 1 (db/set-location! t-conn location)))
-          (is (= location (db/get-location t-conn {:id id}))))
+          (is (= location (db/get-location t-conn {:psid psid}))))
 
         (testing "delete location"
-          (is (= 1 (db/delete-location! t-conn {:id id})))
-          (is (= nil (db/get-location t-conn {:id id}))))))))
+          (is (= 1 (db/delete-location! t-conn {:psid psid})))
+          (is (= nil (db/get-location t-conn {:psid psid}))))))))
