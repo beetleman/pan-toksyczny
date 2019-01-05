@@ -28,8 +28,8 @@ WHERE psid = :psid
       AND NOT lat is NULL
       AND NOT long is NULL
 
--- :name get-all-location :?
--- :doc get user location
+-- :name get-locations :?
+-- :doc get user locations
 SELECT lat, long, url FROM users
 
 -- :name delete-location! :! :n
