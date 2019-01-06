@@ -35,6 +35,16 @@
         (is (= psid
                (:psid (db/get-user t-conn {:psid psid})))))
 
+      (testing "get or create user, user exists"
+        (is (= (db/get-user t-conn {:psid psid})
+               (db/get-or-create-user! t-conn {:psid psid}))))
+
+      (testing "get or create user, user not exists"
+        (let [psid     (str psid "42")
+              new-user (db/get-or-create-user! t-conn {:psid psid})]
+          (is (= (db/get-user t-conn {:psid psid})
+                 new-user))))
+
       (let [location {:lat  48.2242784
                       :long 12.2228064
                       :psid psid}]

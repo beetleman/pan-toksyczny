@@ -41,3 +41,12 @@
   (sql-value [v]
     (jt/sql-timestamp v)))
 
+
+(defn get-or-create-user!
+  ([data]
+   (get-or-create-user! *db* data))
+  ([db data]
+   (if-let [user (get-user db data)]
+     user
+     (do (create-user! db data)
+         (get-user db data)))))

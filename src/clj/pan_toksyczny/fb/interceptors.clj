@@ -2,7 +2,8 @@
   (:require [clojure.spec.alpha :as s]
             [clojure.tools.logging :as log]
             [pan-toksyczny.fb.preprocessing :as preprocessing]
-            [pan-toksyczny.fb.spec :as spec]))
+            [pan-toksyczny.fb.spec :as spec]
+            [pan-toksyczny.db.core :as db]))
 
 (def error
   {:error (fn [{error :error :as ctx}]
@@ -25,8 +26,14 @@
                 (assoc ctx :request conformed))))})
 
 
+(defn- -add-user [message]
+  (if-let [psid (get-in message [:sender :id])]
+    (assoc message ::user (db/get-or-create-user! {:psid psid}))
+    message))
+
 (def user
-  {:enter identity})
+  {:enter (fn [ctx]
+            (update ctx :request #(map -add-user %)))})
 
 
 (def conversation-context

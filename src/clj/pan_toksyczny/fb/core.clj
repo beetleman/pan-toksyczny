@@ -10,9 +10,9 @@
 (defn process-message [message]
   (sieppari/execute [interceptors/error
                      interceptors/conform
+                     interceptors/message-flatten
                      interceptors/user
                      interceptors/conversation-context
-                     interceptors/message-flatten
                      handler]
                     message))
 

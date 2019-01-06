@@ -30,7 +30,7 @@ WHERE psid = :psid
 
 -- :name get-locations :?
 -- :doc get user locations
-SELECT lat, long, url FROM users
+SELECT lat, long FROM users
 
 -- :name delete-location! :! :n
 -- :doc delete user location
