@@ -24,10 +24,10 @@
       args:
         chdir: ~/
     - name: up services
-      command: docker-compose run
+      command: docker-compose run --rm migrate
       args:
         chdir: ~/
     - name: up services
-      command: docker-compose up -d
+      command: docker-compose up -d app
       args:
         chdir: ~/

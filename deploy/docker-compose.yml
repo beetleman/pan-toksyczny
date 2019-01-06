@@ -1,15 +1,23 @@
-version: "3"
+version: "3.7"
+
+x-base: &base
+  image: registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest
+  volumes:
+    - ./db:/db
+    - ./log:/log
+    - ./hornetq-data:/hornetq-data
+  environment:
+    - AQICN_TOKEN=$AQICN_TOKEN
+    - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
+
 
 services:
   app:
-    image: registry.gitlab.com/mateusz.probachta/pan-toksyczny:latest
+    << : *base
     restart: always
     ports:
       - "3000:3000"
-    volumes:
-      - ./db:/db
-      - ./log:/log
-      - ./hornetq-data:/hornetq-data
-    environment:
-      - AQICN_TOKEN=$AQICN_TOKEN
-      - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN
+
+  migrate:
+    << : *base
+    command: java -jar /pan-toksyczny.jar migrate
