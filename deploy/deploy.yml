@@ -20,7 +20,11 @@
       args:
         chdir: ~/
     - name: kill services
-      command: docker-compose kill
+      command: docker-compose down -v
+      args:
+        chdir: ~/
+    - name: up services
+      command: docker-compose run
       args:
         chdir: ~/
     - name: up services

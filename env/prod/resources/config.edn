@@ -1,3 +1,3 @@
 {:prod true
  :port 3000
- :database-url "jdbc:h2:./pan_toksyczny.db"}
+ :database-url "jdbc:h2:./db/pan_toksyczny.db"}

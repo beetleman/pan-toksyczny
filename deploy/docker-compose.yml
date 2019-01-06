@@ -6,6 +6,10 @@ services:
     restart: always
     ports:
       - "3000:3000"
+    volumes:
+      - ./db:/db
+      - ./log:/log
+      - ./hornetq-data:/hornetq-data
     environment:
       - AQICN_TOKEN=$AQICN_TOKEN
       - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN

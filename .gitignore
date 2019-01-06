@@ -11,4 +11,7 @@ test-config.edn
 profiles.clj
 /.env
 .nrepl-port
+/.m2
+/db
 /log
+/hornetq-data
