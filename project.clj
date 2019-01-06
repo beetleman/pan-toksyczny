@@ -68,7 +68,7 @@
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.23.0"]
 
                                  [refactor-nrepl "2.4.0"] ; emacs/cider
-                                 [cider/cider-nrepl "0.19.0"] ; emacs/cider
+                                 [cider/cider-nrepl "0.20.0-SNAPSHOT"] ; emacs/cider
                                  ]
 
                   :source-paths ["env/dev/clj"]
