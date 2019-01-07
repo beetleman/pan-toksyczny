@@ -1,4 +1,4 @@
-(defproject pan-toksyczny "0.2.1-SNAPSHOT"
+(defproject pan-toksyczny "0.2.2-SNAPSHOT"
 
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
