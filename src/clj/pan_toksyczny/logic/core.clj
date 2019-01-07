@@ -33,4 +33,5 @@
 
 (defn handler [request]
   (doseq [msg request]
-    (-handler msg)))
+    (-handler msg))
+  request)

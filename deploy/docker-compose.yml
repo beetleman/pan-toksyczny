@@ -5,7 +5,6 @@ x-base: &base
   volumes:
     - ./db:/db
     - ./log:/log
-    - ./hornetq-data:/hornetq-data
   environment:
     - AQICN_TOKEN=$AQICN_TOKEN
     - PAGE_ACCESS_TOKEN=$PAGE_ACCESS_TOKEN

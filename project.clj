@@ -19,11 +19,16 @@
                  [metosin/muuntaja "0.6.3"]
                  [metosin/reitit "0.2.10"]
                  [metosin/ring-http-response "0.9.1"]
+                 [metosin/sieppari "0.0.0-alpha6"]
+
                  [mount "0.1.15"]
                  [nrepl "0.5.3"]
+
                  [org.clojure/clojure "1.10.0"]
+                 [org.clojure/core.async "0.4.490"]
                  [org.clojure/tools.cli "0.4.1"]
                  [org.clojure/tools.logging "0.4.1"]
+
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
                  [selmer "1.12.5"]
@@ -32,10 +37,7 @@
                  [funcool/promesa "1.9.0"]
 
                  [org.immutant/web "2.1.10"]
-                 [org.immutant/messaging "2.1.10"]
-                 [org.immutant/scheduling "2.1.10"]
-
-                 [metosin/sieppari "0.0.0-alpha6"]]
+                 [org.immutant/scheduling "2.1.10"]]
 
   :min-lein-version "2.0.0"
 
