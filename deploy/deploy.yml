@@ -23,7 +23,7 @@
       command: docker-compose down -v
       args:
         chdir: ~/
-    - name: up services
+    - name: migrate
       command: docker-compose run --rm migrate
       args:
         chdir: ~/
