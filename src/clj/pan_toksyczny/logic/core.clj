@@ -9,13 +9,36 @@
             [pan-toksyczny.fb.interceptors :as interceptors]
             [pan-toksyczny.http :as http]))
 
-(defmulti -handler ::preprocessing/type)
 
-(defmethod -handler :postback
+(defn- get-recipent [message]
+  (get-in message [:sender :id]))
+
+(defn- check-aqi [recipent coordinates]
+  (http/execute (messages/template (:page-access-token env)
+                                   recipent
+                                   (-> @(air-quality/coordinates-feed coordinates)
+                                       :aqi
+                                       interpreter/aqi->text)
+                                   [["Check again" ::check-again]])))
+
+
+(defn- ask-location [recipent]
+    (http/execute (messages/text-location (:page-access-token env)
+                                          recipent
+                                          "Where are you?")))
+
+
+(defn- -handler-dispatch [{type ::preprocessing/type :as message}]
+  (if (= type :postback)
+    (get message :payload)
+    type))
+
+
+(defmulti -handler -handler-dispatch)
+
+(defmethod -handler :pan-toksyczny.fb.core/aqi
   [message]
-  (http/execute (messages/text-location (:page-access-token env)
-                                        (get-in message [:sender :id])
-                                        "Where are you?")))
+  (ask-location (get-recipent message)))
 
 (defmethod -handler :location
   [{coordinates ::preprocessing/data
@@ -23,13 +46,18 @@
     :as         message}]
   (let [coordinates (select-keys message [:long :lat])]
     (db/set-location! (merge user coordinates))
-    (http/execute (messages/text (:page-access-token env)
-                                 (get-in message [:sender :id])
-                                 (-> @(air-quality/coordinates-feed coordinates)
-                                     :aqi
-                                     interpreter/aqi->text)))))
+    (check-aqi (get-recipent message)
+               coordinates)))
 
-(defmethod -handler :default [r] (log/debug r))
+(defmethod -handler ::check-again
+  [{ user        ::interceptors/user
+    :as         message}]
+  (let [coordinates (select-keys user [:long :lat])]
+    (check-aqi (get-recipent message)
+               coordinates)))
+
+(defmethod -handler :default [r] (log/debug "ignored" r))
+
 
 (defn handler [request]
   (doseq [msg request]
