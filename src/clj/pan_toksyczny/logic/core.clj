@@ -50,11 +50,14 @@
                coordinates)))
 
 (defmethod -handler ::check-again
-  [{ user        ::interceptors/user
-    :as         message}]
-  (let [coordinates (select-keys user [:long :lat])]
-    (check-aqi (get-recipent message)
-               coordinates)))
+  [{user ::interceptors/user
+    :as  message}]
+  (let [coordinates (select-keys user [:long :lat])
+        recipent    (get-recipent message)]
+    (if (->> coordinates vals (some nil?))
+      (ask-location recipent)
+      (check-aqi recipent
+                 coordinates))))
 
 (defmethod -handler :default [r] (log/debug "ignored" r))
 
