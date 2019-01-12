@@ -55,4 +55,20 @@
 
         (testing "delete location"
           (is (= 1 (db/delete-location! t-conn {:psid psid})))
-          (is (= nil (db/get-location t-conn {:psid psid}))))))))
+          (is (= nil (db/get-location t-conn {:psid psid})))))
+
+      (let [aqi {:aqi         12
+                 :dominentpol "pm25",
+                 :iaqi        {:no2  {:v 24.1}
+                               :pm10 {:v 35}
+                               :w    {:v 0.3}
+                               :wg   {:v 0.3}
+                               :pm25 {:v 154}
+                               :co   {:v 11.7}
+                               :so2  {:v 6}
+                               :t    {:v 2.2}
+                               :p    {:v 1007.7}}
+                 :psid        psid}]
+        (testing "add and get aqi"
+          (is (= 1 (db/set-aqi! t-conn aqi)))
+          (is (= aqi (db/get-aqi t-conn {:psid psid}))))))))

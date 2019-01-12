@@ -13,13 +13,19 @@
 (defn- get-recipent [message]
   (get-in message [:sender :id]))
 
+(defn pprint-pipe [x]
+  (clojure.pprint/pprint x)
+  x)
+
 (defn- check-aqi [recipent coordinates]
   (http/execute (messages/template (:page-access-token env)
                                    recipent
                                    (-> @(air-quality/coordinates-feed coordinates)
+                                       pprint-pipe
                                        :aqi
                                        interpreter/aqi->text)
-                                   [["Check again" ::check-again]])))
+                                   [["Details" ::details]
+                                    ["Check again" ::check-again]])))
 
 
 (defn- ask-location [recipent]
