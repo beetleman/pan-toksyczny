@@ -81,3 +81,24 @@
   (str
    (aqi->emoji aqi) (aqi->level aqi) "(aqi: " aqi ")" ".\n"
    (aqi->health aqi)))
+
+
+(def iaqi-keys-mapping
+  {:pm25 "PM2.5:"
+   :pm10 "PM10:"
+   :o3   "O₃:"
+   :no2  "NO₂:"
+   :so2  "SO₂:"
+   :co   "CO:"})
+
+(defn aqi-data->text [{dominentpol :dominentpol
+                       iaqi        :iaqi}]
+  (let [dominentpol-key (keyword dominentpol)]
+    (clojure.string/join (->> iaqi
+                              (map (fn [[key {value :v}]]
+                                     (when-let [name (iaqi-keys-mapping key)]
+                                       (format (if (= key dominentpol-key)
+                                                 "%-10s %s!\n"
+                                                 "%-10s %s\n")
+                                               name value))))
+                              (filter identity)))))

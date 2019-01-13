@@ -13,22 +13,27 @@
 (defn- get-recipent [message]
   (get-in message [:sender :id]))
 
-(defn pprint-pipe [x]
-  (clojure.pprint/pprint x)
-  x)
 
-(defn- check-aqi [recipent coordinates]
+(defn- check-aqi [recipent coordinates user]
+  (let [aqi-data (air-quality/coordinates-feed coordinates)]
+    (db/set-aqi! (merge user @aqi-data))
+    (db/set-location! (merge user coordinates))
+    (http/execute (messages/template (:page-access-token env)
+                                     recipent
+                                     (-> @aqi-data
+                                         :aqi
+                                         interpreter/aqi->text)
+                                     [["Details" ::details]
+                                      ["Check again" ::check-again]]))))
+
+(defn- details-aqi [recipent aqi-data user]
   (http/execute (messages/template (:page-access-token env)
                                    recipent
-                                   (-> @(air-quality/coordinates-feed coordinates)
-                                       pprint-pipe
-                                       :aqi
-                                       interpreter/aqi->text)
-                                   [["Details" ::details]
-                                    ["Check again" ::check-again]])))
+                                   (interpreter/aqi-data->text aqi-data)
+                                   [["Check again" ::check-again]])))
 
 
-(defn- ask-location [recipent]
+(defn- ask-location [recipent user]
     (http/execute (messages/text-location (:page-access-token env)
                                           recipent
                                           "Where are you?")))
@@ -43,17 +48,19 @@
 (defmulti -handler -handler-dispatch)
 
 (defmethod -handler :pan-toksyczny.fb.core/aqi
-  [message]
-  (ask-location (get-recipent message)))
+  [{user ::interceptors/user
+    :as  message}]
+  (ask-location (get-recipent message)
+                user))
 
 (defmethod -handler :location
   [{coordinates ::preprocessing/data
     user        ::interceptors/user
     :as         message}]
   (let [coordinates (select-keys message [:long :lat])]
-    (db/set-location! (merge user coordinates))
     (check-aqi (get-recipent message)
-               coordinates)))
+               coordinates
+               user)))
 
 (defmethod -handler ::check-again
   [{user ::interceptors/user
@@ -61,9 +68,21 @@
   (let [coordinates (select-keys user [:long :lat])
         recipent    (get-recipent message)]
     (if (->> coordinates vals (some nil?))
-      (ask-location recipent)
+      (ask-location recipent user)
       (check-aqi recipent
-                 coordinates))))
+                 coordinates
+                 user))))
+
+(defmethod -handler ::details
+  [{user ::interceptors/user
+    :as  message}]
+  (let [aqi-data (db/get-aqi user)
+        recipent (get-recipent message)]
+    (if (nil? aqi-data)
+      (ask-location recipent user)
+      (details-aqi recipent
+                   aqi-data
+                   user))))
 
 (defmethod -handler :default [r] (log/debug "ignored" r))
 
