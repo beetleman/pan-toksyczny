@@ -15,7 +15,6 @@
                  [luminus-migrations "0.6.3"]
                  [luminus-transit "0.1.1"]
                  [luminus/ring-ttl-session "0.3.2"]
-                 [markdown-clj "1.0.5"]
                  [metosin/muuntaja "0.6.3"]
                  [metosin/reitit "0.2.10"]
                  [metosin/ring-http-response "0.9.1"]
@@ -70,7 +69,7 @@
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.23.0"]
 
                                  [refactor-nrepl "2.4.0"] ; emacs/cider
-                                 [cider/cider-nrepl "0.20.0-SNAPSHOT"] ; emacs/cider
+                                 [cider/cider-nrepl "0.20.0"] ; emacs/cider
                                  ]
 
                   :source-paths ["env/dev/clj"]
