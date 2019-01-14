@@ -31,7 +31,7 @@ WHERE psid = :psid
 
 -- :name get-locations :?
 -- :doc get user locations
-SELECT lat, long FROM users
+SELECT lat, long, psid FROM users
 
 -- :name delete-location! :! :n
 -- :doc delete user location
@@ -42,7 +42,7 @@ WHERE psid = :psid
 
 
 -- :name set-aqi! :! :n
--- :doc update user location
+-- :doc update user aqi
 UPDATE users
 SET aqi = :aqi,
     iaqi = :iaqi,
@@ -50,7 +50,7 @@ SET aqi = :aqi,
 WHERE psid = :psid
 
 -- :name delete-aqi! :! :n
--- :doc update user location
+-- :doc update user aqi
 UPDATE users
 SET aqi = NULL,
     iaqi = NULL,
@@ -58,7 +58,7 @@ SET aqi = NULL,
 WHERE psid = :psid
 
 -- :name get-aqi :? :1
--- :doc get user location
+-- :doc get user aqi
 SELECT aqi, iaqi, dominentpol, psid FROM users
 WHERE psid = :psid
       AND NOT aqi is NULL
