@@ -23,7 +23,7 @@
    :message   message})
 
 
-(defn- postback-body [item]
+(defn- postback-button-body [item]
   (let [[title payload] (if (coll? item)
                           item
                           [item item])]
@@ -40,18 +40,36 @@
                (text-body recipient text)))
 
 
-(defn- template-body [recipient text items]
+(defn- template-generic-element-body [{:keys [title subtitle items]}]
+  {:title title
+   :subtitle subtitle
+   :buttons (mapv postback-button-body items)})
+
+(defn- template-generic-body [recipient elements]
+  (message-body recipient
+                {:attachment
+                 {:type "template",
+                  :payload
+                  {:template_type "generic",
+                   :elements (mapv template-generic-element-body elements)}}}))
+
+(defn template-generic [access-token recipient elements]
+  (create-call access-token
+               (template-generic-body recipient elements)))
+
+
+(defn- template-button-body [recipient text items]
   (message-body recipient
                 {:attachment
                  {:type "template"
                   :payload
                   {:template_type "button"
                    :text text
-                   :buttons (mapv postback-body items)}}}))
+                   :buttons (mapv postback-button-body items)}}}))
 
-(defn template [access-token recipient text items]
+(defn template-button [access-token recipient text items]
   (create-call access-token
-               (template-body recipient text items)))
+               (template-button-body recipient text items)))
 
 
 (defn text-location [access-token recipient text]
@@ -67,7 +85,7 @@
    [{:locale                  "default",
      :composer_input_disabled composer-input-disabled,
      :call_to_actions
-     (mapv postback-body items)}]})
+     (mapv postback-button-body items)}]})
 
 
 (defn persistent-menu

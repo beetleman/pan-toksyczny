@@ -18,19 +18,19 @@
   (let [aqi-data (air-quality/coordinates-feed coordinates)]
     (db/set-aqi! (merge user @aqi-data))
     (db/set-location! (merge user coordinates))
-    (http/execute (messages/template (:page-access-token env)
-                                     recipent
-                                     (-> @aqi-data
-                                         :aqi
-                                         interpreter/aqi->text)
-                                     [["Details" ::details]
-                                      ["Check again" ::check-again]]))))
+    @(http/execute (messages/template-button (:page-access-token env)
+                                             recipent
+                                             (-> @aqi-data
+                                                 :aqi
+                                                 interpreter/aqi->text)
+                                             [["Details" ::details]
+                                              ["Check again" ::check-again]]))))
 
 (defn- details-aqi [recipent aqi-data user]
-  (http/execute (messages/template (:page-access-token env)
-                                   recipent
-                                   (interpreter/aqi-data->text aqi-data)
-                                   [["Check again" ::check-again]])))
+  @(http/execute (messages/template-button (:page-access-token env)
+                                           recipent
+                                           (interpreter/aqi-data->text aqi-data)
+                                           [["Check again" ::check-again]])))
 
 
 (defn- ask-location [recipent user]
