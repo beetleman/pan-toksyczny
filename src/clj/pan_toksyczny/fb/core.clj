@@ -1,5 +1,6 @@
 (ns pan-toksyczny.fb.core
-  (:require [mount.core :as mount]
+  (:require [clojure.core.async :as a]
+            [mount.core :as mount]
             [pan-toksyczny.config :refer [env]]
             [pan-toksyczny.fb.interceptors :as interceptors]
             [pan-toksyczny.fb.messages :as messages]
@@ -19,4 +20,6 @@
 (mount/defstate persistent-menu
   :start (let [action (messages/persistent-menu (:page-access-token env)
                                                 [["AQI?" ::aqi]])]
-           @(http/execute action)))
+           (-> action
+               http/execute
+               a/<!!)))
