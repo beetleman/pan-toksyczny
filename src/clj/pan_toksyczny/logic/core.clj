@@ -1,36 +1,39 @@
 (ns pan-toksyczny.logic.core
-  (:require [clojure.tools.logging :as log]
+  (:require [clojure.core.async :as a]
+            [clojure.tools.logging :as log]
             [pan-toksyczny.air-quality.core :as air-quality]
             [pan-toksyczny.air-quality.interpreter :as interpreter]
             [pan-toksyczny.config :refer [env]]
             [pan-toksyczny.db.core :as db]
+            [pan-toksyczny.fb.interceptors :as interceptors]
             [pan-toksyczny.fb.messages :as messages]
             [pan-toksyczny.fb.preprocessing :as preprocessing]
-            [pan-toksyczny.fb.interceptors :as interceptors]
             [pan-toksyczny.http :as http]))
-
 
 (defn- get-recipent [message]
   (get-in message [:sender :id]))
 
 
 (defn- check-aqi [recipent coordinates user]
-  (let [aqi-data (air-quality/coordinates-feed coordinates)]
-    (db/set-aqi! (merge user @aqi-data))
-    (db/set-location! (merge user coordinates))
-    @(http/execute (messages/template-button (:page-access-token env)
-                                             recipent
-                                             (-> @aqi-data
-                                                 :aqi
-                                                 interpreter/aqi->text)
-                                             [["Details" ::details]
-                                              ["Check again" ::check-again]]))))
+  (a/go
+    (let [aqi-data (-> coordinates
+                       air-quality/coordinates-feed
+                       a/<!)]
+      (db/set-aqi! (merge user aqi-data))
+      (db/set-location! (merge user coordinates))
+      (http/execute (messages/template-button (:page-access-token env)
+                                              recipent
+                                              (-> aqi-data
+                                                  :aqi
+                                                  interpreter/aqi->text)
+                                              [["Details" ::details]
+                                               ["Check again" ::check-again]])))))
 
 (defn- details-aqi [recipent aqi-data user]
-  @(http/execute (messages/template-button (:page-access-token env)
-                                           recipent
-                                           (interpreter/aqi-data->text aqi-data)
-                                           [["Check again" ::check-again]])))
+  (http/execute (messages/template-button (:page-access-token env)
+                                          recipent
+                                          (interpreter/aqi-data->text aqi-data)
+                                          [["Check again" ::check-again]])))
 
 
 (defn- ask-location [recipent user]

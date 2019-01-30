@@ -33,8 +33,6 @@
                  [selmer "1.12.5"]
                  [clj-http "3.9.1"]
 
-                 [funcool/promesa "1.9.0"]
-
                  [org.immutant/web "2.1.10"]
                  [org.immutant/scheduling "2.1.10"]]
 
