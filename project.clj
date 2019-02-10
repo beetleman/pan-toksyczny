@@ -11,16 +11,16 @@
                  [com.h2database/h2 "1.4.197"]
                  [conman "0.8.3"]
                  [cprop "0.1.13"]
-                 [luminus-immutant "0.2.4" :exclusions [org.immutant/web]]
+                 [luminus-immutant "0.2.5" :exclusions [org.immutant/web]]
                  [luminus-migrations "0.6.3"]
                  [luminus-transit "0.1.1"]
                  [luminus/ring-ttl-session "0.3.2"]
                  [metosin/muuntaja "0.6.3"]
-                 [metosin/reitit "0.2.10"]
+                 [metosin/reitit "0.2.13"]
                  [metosin/ring-http-response "0.9.1"]
                  [metosin/sieppari "0.0.0-alpha6"]
 
-                 [mount "0.1.15"]
+                 [mount "0.1.16"]
                  [nrepl "0.5.3"]
 
                  [org.clojure/clojure "1.10.0"]
@@ -30,7 +30,7 @@
 
                  [ring/ring-core "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [selmer "1.12.5"]
+                 [selmer "1.12.6"]
                  [clj-http "3.9.1"]
 
                  [org.immutant/web "2.1.10"]]
