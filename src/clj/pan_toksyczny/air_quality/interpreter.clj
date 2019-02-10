@@ -1,33 +1,4 @@
 (ns pan-toksyczny.air-quality.interpreter)
-;TODO: use test data in tests
-#_{:aqi         73,
-   :idx         9039,
-   :attributions
-   [{:url "http://monitoring.krakow.pios.gov.pl/",
-     :name
-     "Regional Inspectorate for Environmental Protection in Krakow (WIOŚ - Wojewódzki Inspektorat Ochrony Środowiska w Krakowie)"}
-    {:url  "http://powietrze.gios.gov.pl/",
-     :name "Główny inspektorat ochrony środowiska"}
-    {:url  "https://waqi.info/",
-     :name "World Air Quality Index Project"}],
-   :city
-   {:geo  [50.099361 20.018317],
-    :name "Kraków, os. Piastów, Małopolska, Poland",
-    :url  "https://aqicn.org/city/poland/malopolska/krakow--os.-piastow"},
-   :dominentpol "pm25",
-   :iaqi
-   {:no2  {:v 4.6},
-    :pm10 {:v 45},
-    :w    {:v 0.2},
-    :wg   {:v 0.7},
-    :pm25 {:v 73},
-    :co   {:v 5.9},
-    :h    {:v 84.7},
-    :so2  {:v 3.3},
-    :t    {:v -0.7},
-    :p    {:v 1023.5}},
-   :time        {:s "2018-11-18 21:00:00", :tz "+01:00", :v 1542574800},
-   :debug       {:sync "2018-11-19T07:35:01+09:00"}}
 
 
 (def health-levels

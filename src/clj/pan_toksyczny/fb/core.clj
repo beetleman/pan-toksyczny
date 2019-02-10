@@ -5,7 +5,7 @@
             [pan-toksyczny.fb.interceptors :as interceptors]
             [pan-toksyczny.fb.messages :as messages]
             [pan-toksyczny.http :as http]
-            [pan-toksyczny.logic.core :refer [handler]]
+            [pan-toksyczny.workflow.core :refer [handler]]
             [sieppari.core :as sieppari]))
 
 (defn process-message [message]
