@@ -33,8 +33,7 @@
                  [selmer "1.12.5"]
                  [clj-http "3.9.1"]
 
-                 [org.immutant/web "2.1.10"]
-                 [org.immutant/scheduling "2.1.10"]]
+                 [org.immutant/web "2.1.10"]]
 
   :min-lein-version "2.0.0"
 

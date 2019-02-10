@@ -1,18 +1,10 @@
 (ns pan-toksyczny.queues
   (:require [clojure.core.async :as a]
-            [clojure.tools.logging :as log]
             [mount.core :as mount]
-            [pan-toksyczny.fb.core :as fb]))
-
-(def n-cpu (.availableProcessors (Runtime/getRuntime)))
-
-(defn create-loging-channel [name]
-  (let [ch (a/chan 1)]
-    (a/go-loop []
-      (when-let [data (a/<! ch)]
-        (log/debug name data)
-        (recur)))
-    ch))
+            [pan-toksyczny.async :refer [create-loging-channel n-cpu]]
+            [pan-toksyczny.workflow.periodic-check :as periodic-check]
+            [pan-toksyczny.fb.core :as fb]
+            [pan-toksyczny.config :refer [check-limit]]))
 
 
 (mount/defstate fb-messages
@@ -30,3 +22,23 @@
 
 (defn fb-publish [x]
   (a/put! fb-messages x))
+
+
+
+(mount/defstate periodic-check-messages
+  :start (a/chan check-limit)
+  :stop (a/close! periodic-check-messages))
+
+(mount/defstate periodic-check-listener
+  :start (a/pipeline-async (* 2 n-cpu)
+                           (create-loging-channel "periodic-check-messages")
+                           (fn [location result]
+                             (a/go
+                               (a/>! result
+                                     (a/<! (periodic-check/check-location location)))
+                               (a/close! result)))
+                           periodic-check-messages)
+  :stop (a/close! periodic-check-listener))
+
+(defn periodic-check-publish [location]
+  (a/put! periodic-check-messages location))

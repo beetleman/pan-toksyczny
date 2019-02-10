@@ -10,3 +10,10 @@
     [(args)
      (source/from-system-props)
      (source/from-env)]))
+
+
+(defstate check-limit
+  :start (get env :check-limit 100))
+
+(defstate max-diff
+  :start (get env :max-diff 10))

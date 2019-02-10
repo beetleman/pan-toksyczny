@@ -1,6 +1,7 @@
 (ns pan-toksyczny.core
   (:require [pan-toksyczny.handler :as handler]
             [pan-toksyczny.nrepl :as nrepl]
+            [pan-toksyczny.schedulers]
             [luminus.http-server :as http]
             [luminus-migrations.core :as migrations]
             [pan-toksyczny.config :refer [env]]
@@ -63,4 +64,3 @@
       (System/exit 0))
     :else
     (start-app args)))
-  
